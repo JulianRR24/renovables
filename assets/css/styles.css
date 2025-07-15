@@ -18,15 +18,15 @@ a:hover::after {
 }
 
 ::-webkit-scrollbar-track {
-  background: MediumSpringGreen;
+  background: #011C40;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: MediumSeaGreen;
+  background: #035AA6;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: SeaGreen;
+  background: #0367A6;
 }
 
 body,
@@ -48,7 +48,7 @@ body {
   justify-content: center;
   height: 100vh;
   overflow: hidden;
-  background: MediumSpringGreen;
+  background: #5FB6D9;
   margin: 0;
   padding: 0;
 }
@@ -72,10 +72,30 @@ body {
   width: 95%;
   height: 90%;
   background: white;
-  box-shadow: 0 20px 40px 0 SeaGreen, inset 0px -10px 17px 1px MediumSeaGreen;
+  box-shadow: 0 20px 40px 0 #035AA6, inset 0px -10px 17px 1px #0367A6;
   overflow: hidden;
   border-radius: 25px;
   z-index: 998;
+  /* Asegurar que el contenedor oculte el desbordamiento */
+  overflow: hidden;
+  /* Añadir un degradado sutil en la parte inferior */
+  position: relative;
+}
+
+/* Añadir un pseudo-elemento para el efecto de desenfoque en la parte inferior */
+.dashboard::after {
+  content: '';
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: linear-gradient(to bottom, 
+    rgba(255, 255, 255, 0) 0%, 
+    rgba(255, 255, 255, 0.8) 50%, 
+    rgba(255, 255, 255, 1) 100%);
+  pointer-events: none;
+  z-index: 1000;
 }
 
 .dashboard {
@@ -88,6 +108,19 @@ body {
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+  /* Asegurar que el padding inferior no interfiera con el scroll */
+  padding-bottom: 40px;
+  /* Añadir un pseudo-elemento para el efecto de desenfoque */
+  mask-image: linear-gradient(to bottom, 
+    transparent 0%, 
+    black 5%, 
+    black 95%, 
+    transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, 
+    transparent 0%, 
+    black 5%, 
+    black 95%, 
+    transparent 100%);
 }
 
 .ui-row-1 {
@@ -103,14 +136,18 @@ body {
 
 .logo-comp {
   position: relative;
-  left: 12px;
+  left: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  width: auto;
-  height: auto;
-  transition: all 0.4s ease-in-out;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+  height: 60px;
+  padding: 10px 0;
+  margin: 0;
+  z-index: 1;
+  transition: left 0.3s ease;
 }
 
 .logo-comp:hover {
@@ -126,8 +163,8 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 100px;
-  background: MediumSpringGreen;
-  box-shadow: 0 5px 15px 0 SeaGreen, inset 0px -6px 12px 0px SeaGreen;
+  background: #035AA6;
+  box-shadow: 0 4px 10px 0 rgba(3, 90, 166, 0.3), inset 0px -4px 8px 0px #011C40;
   transition: all 0.4s ease-in-out;
 }
 
@@ -135,172 +172,144 @@ body {
   fill: white;
   width: 70%;
   height: 70%;
-  filter: drop-shadow(1px 1px 0px SeaGreen);
   transition: all 0.4s ease-in-out;
 }
 
 .logo-comp p {
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   font-size: 16pt;
   margin: 0;
   margin-left: 12px;
   padding: 0;
-  color: SeaGreen;
+  color: #011C40;
+  font-weight: 600;
   transition: all 0.4s ease-in-out;
+  text-shadow: 1px 1px 0 rgba(1, 28, 64, 0.1);
 }
 
 .logo-comp:hover > p {
-  color: black;
+  color: #035AA6;
   transition: all 0.4s ease-in-out;
 }
 
 .logo-comp:hover > div > svg {
-  fill: black;
-  filter: unset;
+  transform: scale(1.1);
   transition: all 0.4s ease-in-out;
-}
-
-.search {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-  height: auto;
-}
-
-.search input {
-  width: 100%;
-  height: 50px;
-  border-radius: 12px;
-  box-shadow: 0 10px 20px 0 #3cb37177, inset 0px -4px 8px 0 SeaGreen;
-  border: none !important;
-  padding: 0px 20px 5px 20px;
-}
-
-.search > svg {
-  position: absolute;
-  right: 20px;
-  bottom: 38%;
-  width: 18px;
-  height: auto;
-  fill: SeaGreen;
-}
-
-.search input:focus {
-  outline: 1px solid MediumSpringGreen;
-}
-
-.profile {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: auto;
-  height: auto;
-}
-
-.profile > svg {
-  fill: dimgray;
-  width: 25px;
-  height: auto;
-  margin-right: 20px;
-}
-
-.profile > svg:nth-child(3) {
-  margin-left: 5px;
-  order: 4;
-  fill: dimgray;
-  margin-right: unset;
-}
-
-.profile > svg:hover,
-.profile-small > svg:hover {
-  cursor: pointer;
-  fill: MediumSpringGreen;
-}
-
-.profile > svg:active,
-.profile-small > svg:active {
-  transform: scale(0.92);
-}
-
-.profile > div {
-  width: 50px;
-  height: 50px;
-  border-radius: 200px;
-  background: url("https://picsum.photos/id/440/60/60");
-  background-position: center;
-  background-size: cover;
-}
-
-.profile-small {
-  display: none;
+  color: white;
 }
 
 .ui-row-2 {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  height: auto;
-  padding: 10px 30px;
+  padding: 0 30px 10px 30px;
+  margin-top: -10px;
 }
 
 .left-sidebar {
   position: sticky;
   top: 20px;
   display: flex;
-  align-self: flex-start;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: auto;
-  height: auto;
+  align-items: stretch;
   background: #eee;
-  padding: 15px 10px;
-  border-radius: 10px;
-  margin-bottom: 30px;
+  padding: 15px;
+  border-radius: 15px;
+  margin: 0;
+  min-width: 300px;
 }
 
-.left-sidebar > div {
+.menu-item {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  width: 45px;
-  height: 45px;
-  background: MediumSpringGreen;
-  border-radius: 10px;
-  margin-bottom: 25px;
-  box-shadow: 0 7px 14px 0 #3cb37199, inset 0px -5px 7px 0px MediumSeaGreen;
-}
-
-.left-sidebar > div:last-of-type {
-  margin-bottom: unset;
-}
-
-.left-sidebar > div:hover {
+  width: 100%;
+  min-height: 50px;
+  background: #F0F4F8;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  box-shadow: 0 4px 10px 0 rgba(1, 28, 64, 0.1), inset 0px -2px 4px 0px rgba(1, 28, 64, 0.05);
+  transition: all 0.3s ease;
   cursor: pointer;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 16px 0 #3cb371dd, inset 0px -5px 9px 0px MediumSeaGreen;
-  border: 1px solid MediumSpringGreen;
+  color: #011C40;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 10pt;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
-.left-sidebar > div > svg {
-  fill: SeaGreen;
+.menu-item:last-of-type {
+  margin-bottom: 0;
+}
+
+.menu-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px 0 rgba(5, 90, 166, 0.15), inset 0px -2px 5px 0px rgba(5, 90, 166, 0.1);
+  background: #E0E9F2;
+  color: #011C40;
+}
+
+/* Estilo para el ítem de menú activo */
+.menu-item.active {
+  background: #035AA6;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(5, 90, 166, 0.3), inset 0px -2px 4px 0px #011C40;
+}
+
+.menu-item.active:hover {
+  background: #0367A6;
+  transform: none;
+  box-shadow: 0 4px 8px 0 rgba(5, 90, 166, 0.3), inset 0px -2px 4px 0px #011C40;
+}
+
+.menu-item svg {
+  fill: #011C40;
   width: 25px;
-  height: auto;
+  height: 25px;
+  margin-right: 15px;
+  transition: all 0.3s ease;
 }
 
-.left-sidebar > div:active {
-  transform: scale(0.92);
+.menu-item.active svg {
+  fill: white;
 }
 
-.left-sidebar > div:hover > svg {
+.menu-item:hover svg {
+  fill: #035AA6;
+}
+
+.menu-item.active:hover svg {
+  fill: white;
+}
+
+.menu-item:active {
+  transform: scale(0.95);
+}
+
+.menu-item:hover svg,
+.menu-item:hover .menu-icon {
   fill: black;
+  transform: scale(1.1);
+}
+
+.menu-title {
+  font-size: 14px;
+  font-weight: 500;
+  white-space: normal;
+  overflow: visible;
+  transition: all 0.3s ease;
+  margin-left: 15px;
+  line-height: 1.3;
+}
+
+.menu-item:hover .menu-title {
+  color: black;
+  font-weight: 600;
 }
 
 .main-content {
@@ -363,8 +372,8 @@ body {
   justify-content: center;
   width: 27%;
   height: 100%;
-  background: MediumSpringGreen;
-  box-shadow: 0 10px 20px 0 #3cb37177, inset 0px -7px 12px 1px MediumSeaGreen;
+  background: #5FB6D9;
+  box-shadow: 0 10px 20px 0 #035AA677, inset 0px -7px 12px 1px #0367A6;
   border-radius: 20px;
   transition: all 0.4s ease-in-out;
 }
@@ -422,7 +431,7 @@ body {
   position: relative;
   width: 100%;
   height: 200px;
-  background: url("https://picsum.photos/id/622/1920/1080");
+  background: url("https://cdn.pixabay.com/photo/2020/01/28/01/49/sunset-4798739_1280.jpg");
   background-size: 100%;
   background-position: center;
   background-attachment: scroll;
@@ -451,7 +460,10 @@ body {
   padding: 0;
   line-height: 30pt;
   margin-bottom: 10px;
-  text-shadow: 1px 1px 0px SeaGreen, 2px 2px 0px SeaGreen;
+  text-shadow: 1px 1px 0px #035AA6, 2px 2px 0px #035AA6;
+  font-weight: 600;
+  text-align: center;
+  padding: 0 20px;
 }
 
 .large-banner a {
@@ -464,24 +476,26 @@ body {
   justify-content: center;
   text-decoration: none;
   padding: 10px 20px;
-  color: dimgray;
+  color: #011C40;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 10px 20px 0 #000000bb, inset 0px -5px 10px 1px SeaGreen;
+  font-weight: 500;
+  box-shadow: 0 4px 8px 0 rgba(1, 28, 64, 0.2), inset 0px -3px 0px 0px #035AA6;
+  transition: all 0.3s ease;
 }
 
 .large-banner a::after {
   position: absolute;
-  top: 110%;
+  top: 100%;
   left: 0;
   width: 100%;
   height: 100%;
   content: "";
-  background: MediumSpringGreen;
+  background: #035AA6;
   border-radius: 12px;
-  box-shadow: 0 10px 20px 0 #000000bb, inset 0px -5px 10px 1px SeaGreen;
   opacity: 0;
   z-index: -1;
+  transition: all 0.3s ease;
 }
 
 .large-banner a:hover {
@@ -504,15 +518,16 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, SpringGreen, SeaGreen);
+  background: linear-gradient(135deg, #035AA6, #011C40);
   content: "";
   border-radius: 20px;
-  mix-blend-mode: soft-light;
+  mix-blend-mode: multiply;
   z-index: -1;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
     rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
     rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset;
   transition: all 0.5s ease-in-out;
+  opacity: 0.8;
 }
 
 .large-banner::after {
@@ -521,13 +536,14 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #00ff7f;
-  background-image: url("https://www.transparenttextures.com/patterns/buried.png");
+  background-color: #035AA6;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
   content: "";
   border-radius: 20px;
-  mix-blend-mode: soft-light;
+  mix-blend-mode: overlay;
   z-index: -2;
   transition: all 0.5s ease-in-out;
+  opacity: 0.4;
 }
 
 .main-content > hr {
@@ -566,7 +582,7 @@ body {
   padding: 30px 20px;
   margin-top: 25px;
   border-radius: 20px;
-  box-shadow: 0 10px 20px 0 #3cb37177, inset 0px -7px 12px 1px MediumSeaGreen;
+  box-shadow: 0 10px 20px 0 #035AA677, inset 0px -7px 12px 1px #0367A6;
   transition: all 0.4s ease-in-out;
 }
 
@@ -623,7 +639,7 @@ body {
 
 .featured-clay > div:hover {
   animation: glow 10s linear infinite;
-  box-shadow: 0 17px 45px 0 #3cb371, inset 0px -7px 12px 1px MediumSeaGreen;
+  box-shadow: 0 17px 45px 0 #035AA6, inset 0px -7px 12px 1px #0367A6;
   cursor: pointer;
   transform: translateY(-10px);
   transition: all 0.4s ease-in-out;
@@ -822,7 +838,7 @@ body {
   width: 300px;
   height: 300px;
   border-radius: 300px;
-  background: MediumSpringGreen;
+  background: #5FB6D9;
   content: "";
   z-index: -1;
 }
@@ -952,15 +968,15 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 6px 15px 0 #3cb371aa, inset 0px -7px 12px 1px black;
+  box-shadow: 0 6px 15px 0 #035AA6aa, inset 0px -7px 12px 1px #011C40;
   margin-right: 10px;
 }
 
 .featured-users > div > div:nth-child(2) > div:hover {
   cursor: pointer;
   transform: translateY(-3px);
-  box-shadow: 0 10px 16px 0 #3cb371dd, inset 0px -5px 9px 0px MediumSeaGreen;
-  border: 1px solid MediumSpringGreen;
+  box-shadow: 0 10px 16px 0 #035AA6dd, inset 0px -5px 9px 0px #0367A6;
+  border: 1px solid #5FB6D9;
 }
 
 .featured-users > div > div:nth-child(2) > div:active {
@@ -1055,7 +1071,7 @@ body {
     width: 300px;
     height: 300px;
     border-radius: 300px;
-    background: MediumSpringGreen;
+    background: #5FB6D9;
     content: "";
     z-index: -1;
   }
@@ -1196,6 +1212,137 @@ body {
   .featured-users > div > div:nth-child(2)::after {
     left: 40%;
   }
+}
+
+/* Estilos para el menú móvil */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 10px;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-menu-toggle:active {
+    transform: scale(0.98);
+}
+
+.menu-icon {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #011C40;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+    position: relative;
+}
+
+.menu-icon:not(:last-child) {
+    margin-bottom: 4px;
+}
+
+.mobile-menu-toggle.active .menu-icon:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.mobile-menu-toggle.active .menu-icon:nth-child(2) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.mobile-menu-toggle.active .menu-icon:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Asegurar que el botón sea visible en móviles */
+@media (max-width: 1200px) {
+    .mobile-menu-toggle {
+        display: flex;
+    }
+}
+
+/* Estilos para el menú lateral en móvil */
+.left-sidebar {
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+/* Ajustar el menú para pantallas medianas y pequeñas */
+@media (max-width: 1200px) {
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .left-sidebar.mobile-visible + .ui-row-2 .logo-comp {
+        left: 300px; /* Ajustar posición del logo cuando el menú está abierto */
+    }
+
+    .left-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 280px;
+        height: 100vh;
+        background: #fff;
+        box-shadow: 2px 0 15px rgba(0, 0, 0, 0.15);
+        z-index: 900;
+        padding: 70px 20px 30px;
+        transform: translateX(-100%);
+        overflow-y: auto;
+    }
+    
+    /* Asegurar que los elementos del menú se vean bien */
+    .menu-item {
+        width: 100%;
+        padding: 12px 15px;
+        margin: 5px 0;
+        border-radius: 8px;
+    }
+    
+    .menu-item svg {
+        min-width: 24px;
+        margin-right: 12px;
+    }
+    
+    .menu-title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .left-sidebar.mobile-visible {
+        transform: translateX(0);
+    }
+
+    .ui-row-2 {
+        padding-left: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
 }
 
 @media (max-width: 760px) {
