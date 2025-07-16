@@ -4,135 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Energía Renovable - [Nombre de la Energía]</title>
-    <!-- Enlaza tu archivo CSS existente -->
     <link rel="stylesheet" href="../assets/css/styles.css">
-    <style>
-        /* Estilos específicos para esta plantilla, si es necesario */
-        .scroll-animation-section {
-            height: 100vh; /* Para que el video ocupe toda la altura de la ventana inicialmente */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f0f0f0; /* Color de fondo temporal */
-            color: #333;
-            font-size: 2em;
-            text-align: center;
-            overflow: hidden; /* Asegura que el video no se desborde */
-        }
-
-        .scroll-animation-section video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Cubre el área manteniendo el aspecto */
-        }
-
-        .content-section {
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .content-section h2 {
-            font-size: 2.5em;
-            color: #2c3e50;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .feature-cards-container {
-            display: grid;
-            /* Ajuste para que las tarjetas sean más anchas y se adapten mejor */
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-
-        /* Reutiliza la clase 'featured-clay' para las tarjetas de características */
-        .featured-clay > div {
-            background-color: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 250px; /* Altura mínima para las tarjetas */
-        }
-
-        .featured-clay > div:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .featured-clay > div h3 {
-            font-size: 1.8em;
-            color: #3498db;
-            margin-bottom: 15px;
-        }
-
-        .featured-clay > div p {
-            font-size: 1.1em;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .minigame-section {
-            background-color: #ecf0f1;
-            padding: 50px 20px;
-            text-align: center;
-            border-radius: 15px;
-            margin-top: 50px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-        }
-
-        .minigame-section h2 {
-            color: #2c3e50;
-            margin-bottom: 30px;
-        }
-
-        .minigame-container {
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
-            min-height: 400px; /* Altura mínima para el juego */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.5em;
-            color: #7f8c8d;
-            border: 2px dashed #bdc3c7;
-        }
-
-        /* Media queries para responsividad */
-        @media (max-width: 768px) {
-            .content-section h2 {
-                font-size: 2em;
-            }
-            .featured-clay > div {
-                min-height: 200px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .content-section {
-                padding: 20px 10px;
-            }
-            .content-section h2 {
-                font-size: 1.8em;
-            }
-            .featured-clay > div h3 {
-                font-size: 1.5em;
-            }
-            .featured-clay > div p {
-                font-size: 1em;
-            }
-        }
     </style>
+
+    <!-- Elemento para la animación del fondo -->
+    <div id="animation-container">
+        <img id="scroll-animation" src="../assets/frames/energiasolar/ezgif-frame-001.jpg" alt="Animación de scroll">
+    </div>
+
+    <!-- Script de animación de scroll -->
+    <script src="../assets/js/scroll-animation.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configuración específica para esta página
+            const scrollAnimation = new ScrollAnimation({
+                animationContainerId: 'animation-container',
+                animationImageId: 'scroll-animation',
+                maxFrames: 144, // Número total de frames
+                framesPath: '../assets/frames/energiasolar/', // Ruta a los frames
+                framePrefix: 'ezgif-frame-', // Prefijo de los archivos de frame
+                frameExtension: '.jpg', // Extensión de los archivos
+                scrollSensitivity: 0.5, // Sensibilidad del scroll
+                scrollThreshold: 30, // Umbral de activación
+                animationSpeed: 0.01, // Velocidad de la animación
+                framePrecision: 0.1, // Precisión del frame
+                opacity: 0.5, // Opacidad de la imagen
+                enableTouch: true // Habilitar soporte táctil
+            });
+
+            const miContenedor = document.getElementById('animation-container');
+            miContenedor.style.zIndex = -1;
+        });
+    </script>   
 </head>
-<body>
+
+<body class="template">
     <div class="dashboard-river">
         <div class="dashboard-container">
             <div class="dashboard">
@@ -257,24 +163,86 @@
                     </div>
 
                     <div class="main-content">
-                        <div class="header">
-                            <div class="page-display">
-                                <!-- Título de la página actual -->
-                                <h1>Energía [Nombre de la Energía]</h1>
-                                <h2>Explora a fondo este tipo de energía renovable</h2>
+                        <!-- 1. Sección de Información Principal -->
+                        <section class="energy-information">
+                            <div class="energy-header">
+                                <h1 class="energy-title">Energía Solar</h1>
+                                <p class="energy-subtitle">Una fuente limpia y renovable de energía</p>
                             </div>
-                        </div>
+                            
+                            <div class="energy-content">
+                                <article class="energy-section">
+                                    <h2>¿Qué es la Energía Solar?</h2>
+                                    <div class="energy-text">
+                                        <p>La energía solar es la energía obtenida directamente del Sol, una fuente inagotable y renovable que nos proporciona luz y calor. A través de tecnologías como los paneles fotovoltaicos y los colectores solares, podemos transformar esta energía en electricidad o calor útil para diversas aplicaciones.</p>
+                                    </div>
+                                </article>
 
-                        <!-- 1. Sección de Scroll Animation (Video) -->
-                        <section class="scroll-animation-section">
-                            <!-- Aquí irá tu video para el efecto de scroll animation -->
-                            <!-- Ejemplo de video (reemplaza con tu propio video) -->
-                            <video autoplay loop muted playsinline>
-                                <source src="https://assets.mixkit.co/videos/preview/mixkit-wind-turbines-in-the-countryside-30588-large.mp4" type="video/mp4">
-                                Tu navegador no soporta la etiqueta de video.
-                            </video>
-                            <div style="position: absolute; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">
-                                Un vistazo a la Energía [Nombre de la Energía]
+                                <div class="energy-features">
+                                    <div class="feature-card">
+                                        <div class="feature-icon">☀️</div>
+                                        <h3>Características Principales</h3>
+                                        <ul>
+                                            <li>Fuente de energía renovable e inagotable</li>
+                                            <li>Bajo impacto ambiental</li>
+                                            <li>Disponible en todo el mundo</li>
+                                            <li>Bajos costos de mantenimiento</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-card">
+                                        <div class="feature-icon">💡</div>
+                                        <h3>Beneficios</h3>
+                                        <ul>
+                                            <li>Reduce la huella de carbono</li>
+                                            <li>Ahorro económico a largo plazo</li>
+                                            <li>Independencia energética</li>
+                                            <li>Bajo mantenimiento</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-card">
+                                        <div class="feature-icon">🌍</div>
+                                        <h3>Impacto Ambiental</h3>
+                                        <ul>
+                                            <li>No genera emisiones de CO₂</li>
+                                            <li>No produce residuos tóxicos</li>
+                                            <li>Bajo consumo de agua</li>
+                                            <li>Contribuye a la sostenibilidad</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <article class="energy-section">
+                                    <h2>¿Cómo Funciona?</h2>
+                                    <div class="energy-text">
+                                        <p>La energía solar se puede aprovechar de dos formas principales: a través de paneles fotovoltaicos que convierten la luz solar directamente en electricidad, o mediante sistemas solares térmicos que utilizan el calor del sol para calentar agua o aire.</p>
+                                        <p>Los sistemas fotovoltaicos están compuestos por celdas que generan corriente eléctrica cuando la luz solar incide sobre ellas, un inversor que convierte la corriente continua en alterna, y un sistema de almacenamiento (baterías) opcional.</p>
+                                    </div>
+                                </article>
+
+                                <div class="energy-stats">
+                                    <div class="stat-item">
+                                        <div class="stat-value">+30%</div>
+                                        <div class="stat-label">Crecimiento anual</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-value">24/7</div>
+                                        <div class="stat-label">Disponibilidad con almacenamiento</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-value">25+</div>
+                                        <div class="stat-label">Años de vida útil</div>
+                                    </div>
+                                </div>
+
+                                <article class="energy-section">
+                                    <h2>Referencias</h2>
+                                    <div class="energy-text">
+                                        <p>La energía solar se puede aprovechar de dos formas principales: a través de paneles fotovoltaicos que convierten la luz solar directamente en electricidad, o mediante sistemas solares térmicos que utilizan el calor del sol para calentar agua o aire.</p>
+                                        <p>Los sistemas fotovoltaicos están compuestos por celdas que generan corriente eléctrica cuando la luz solar incide sobre ellas, un inversor que convierte la corriente continua en alterna, y un sistema de almacenamiento (baterías) opcional.</p>
+                                    </div>
+                                </article>
                             </div>
                         </section>
 
@@ -282,16 +250,20 @@
 
                         <!-- 2. Sección de Tarjetas de Características/Beneficios/Contraindicaciones -->
                         <section>
-                            <div class="featured-clay">
+                            <div class="featured-template">
       
                                 <div>
                     
                                   <div></div>
                     
                                   <div>
-                                    <h3>Energia solar</h3>
+                                    <h3>Características</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    <a href="javascript:void(0);" title="featured clay">Conocer mas</a>
+                                    <ul>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                    </ul>
                                   </div>
                     
                                 </div>
@@ -301,9 +273,13 @@
                                   <div></div>
                     
                                   <div>
-                                    <h3>Energia eólica</h3>
+                                    <h3>Beneficios</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    <a href="javascript:void(0);" title="featured clay">Conocer mas</a>
+                                    <ul>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                    </ul>
                                   </div>
                     
                                 </div>
@@ -313,45 +289,13 @@
                                   <div></div>
                     
                                   <div>
-                                    <h3>Energia hidroeléctrica</h3>
+                                    <h3>Contraindicaciones</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    <a href="javascript:void(0);" title="featured clay">Conocer mas</a>
-                                  </div>
-                    
-                                </div>
-                    
-                                <div>
-                    
-                                  <div></div>
-                    
-                                  <div>
-                                    <h3>Energia geotérmica</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    <a href="javascript:void(0);" title="featured clay">Conocer mas</a>
-                                  </div>
-                    
-                                </div>
-                    
-                                <div>
-                    
-                                  <div></div>
-                    
-                                  <div>
-                                    <h3>Energia biomasa</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    <a href="javascript:void(0);" title="featured clay">Conocer mas</a>
-                                  </div>
-                    
-                                </div>
-                    
-                                <div>
-                    
-                                  <div></div>
-                    
-                                  <div>
-                                    <h3>Energia mareomotriz</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    <a href="javascript:void(0);" title="featured clay">Conocer mas</a>
+                                    <ul>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                    </ul>
                                   </div>
                     
                                 </div>
@@ -361,17 +305,94 @@
 
                         <hr>
 
-                        <!-- 3. Sección del Minijuego -->
-                        <section class="content-section minigame-section">
-                            <h2>¡Pon a prueba tus conocimientos!</h2>
-                            <p>Diviértete y aprende con nuestro minijuego interactivo sobre la Energía [Nombre de la Energía].</p>
-                            <div class="minigame-container">
-                                <!-- Aquí irá el código de tu minijuego -->
-                                <p>Tu minijuego interactivo se cargará aquí.</p>
+                        <!-- Sección de Visualización 3D -->
+                        <section class="energy-section" id="modelo-3d" style="background: transparent; box-shadow: none;">
+                            <h2>Panel Solar - Modelo 3D Interactivo</h2>
+                            <p style="color: #333;">Explora este modelo 3D interactivo de un panel solar. Puedes hacer clic y arrastrar para rotar la vista, usar la rueda del mouse para acercar/alejar, y mantener presionada la tecla Ctrl mientras arrastras para mover la cámara.</p>
+                            
+                            <div class="model3d-container" style="max-width: 1000px; margin: 0 auto; padding: 0 15px;">
+                                <div id="model3d-viewer" style="width: 100%; height: 500px; border: 1px solid rgba(221, 221, 221, 0.3); border-radius: 8px; position: relative; margin: 0 auto; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(5px);">
+                                    <div id="loading-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.5); border-radius: 8px;">
+                                        <div style="text-align: center; color: #fff;">
+                                            <div class="spinner" style="width: 40px; height: 40px; margin: 0 auto 10px; border: 4px solid rgba(255, 255, 255, 0.3); border-top: 4px solid #3498db; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+                                            <p style="color: #fff;">Cargando modelo 3D...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="model3d-controls" style="margin-top: 15px; text-align: center;">
+                                    <button id="reset-camera" class="btn" style="margin: 0 5px;">Reiniciar Vista</button>
+                                    <button id="toggle-wireframe" class="btn" style="margin: 0 5px;">Modo Alámbrico</button>
+                                    <button id="toggle-lights" class="btn" style="margin: 0 5px;">Alternar Luces</button>
+                                </div>
+                            </div>
+                            
+                            <div class="model-info" style="margin-top: 20px; padding: 15px; background: rgba(255, 255, 255, 0.1); border-radius: 8px; backdrop-filter: blur(5px); border: 1px solid rgba(255, 255, 255, 0.1);">
+                                <h3 style="color: #333;">Acerca de este modelo</h3>
+                                <p style="color: #333;">Este modelo 3D muestra un panel solar fotovoltaico típico utilizado en instalaciones de energía renovable. Los paneles solares convierten la luz del sol en electricidad mediante el efecto fotoeléctrico.</p>
+                                <ul style="color: #333;">
+                                    <li><strong>Materiales:</strong> Células fotovoltaicas, marco de aluminio, vidrio templado</li>
+                                    <li><strong>Eficiencia típica:</strong> 15-22%</li>
+                                    <li><strong>Vida útil:</strong> 25-30 años</li>
+                                </ul>
                             </div>
                         </section>
 
-                        <!-- Puedes añadir más secciones aquí si lo necesitas -->
+                        <!-- Incluir Three.js y complementos -->
+                        <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+                        <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/OBJLoader.js"></script>
+                        <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/MTLLoader.js"></script>
+                        <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+                        
+                        <!-- Configuración del modelo 3D -->
+                        <script>
+                            // Configuración personalizada para el modelo 3D
+                            window.modelConfig = {
+                                basePath: '../../assets/3d-models/solarpanel/',  // Ruta base para los archivos del modelo  
+                                mtlFile: '10781_Solar-Panels_V1.mtl',           // Archivo MTL
+                                objFile: '10781_Solar-Panels_V1.obj',           // Archivo OBJ
+                                scale: 0.05,                                    // Escala del modelo
+                                position: { x: 0, y: 0, z: 0 },                 // Posición inicial
+                                rotation: { x: 0, y: 0, z: 0 }                  // Rotación inicial
+                            };
+                        </script>
+                        
+                        <!-- Script para el visor 3D -->
+                        <script src="../../assets/js/3d-viewer.js"></script>
+
+                        <hr>
+
+                        <!-- 3. Sección del Minijuego -->
+                        <section class="content-section minigame-section">
+                            <h2>¡Minijuego de Energía Solar!</h2>
+                            <p>Aprende sobre la importancia de la orientación de los paneles solares para maximizar la producción de energía.</p>
+                            <div class="game-instructions">
+                                <h3>¿Cómo jugar?</h3>
+                                <ul>
+                                    <li>Mueve el <strong>ratón</strong> para rotar el panel solar y alinearlo con el sol.</li>
+                                    <li>Intenta mantener el panel apuntando hacia el sol para maximizar la producción de energía.</li>
+                                    <li>El sol cambiará de posición cada 3 segundos. ¡Ajusta el panel para mantener una alta eficiencia!</li>
+                                    <li>Tu puntuación (0-100%) muestra qué tan bien está alineado el panel con el sol.</li>
+                                </ul>
+                            </div>
+                            <div class="game-container">
+                                <canvas id="solarGame" width="600" height="400" class="game-canvas"></canvas>
+                                <div class="game-stats">
+                                    <div class="energy-counter">
+                                        <span class="energy-icon">⚡</span>
+                                        <span id="energyValue">0</span> kWh
+                                    </div>
+                                <div class="game-controls">
+                                        <button id="solarStartBtn" class="btn">Comenzar Juego</button>
+                                        <button id="solarResetBtn" class="btn">Reiniciar</button>
+                                </div>
+                                </div>
+                                <p id="solarGameScore" style="margin-top: 1rem;">¡Alinea el panel solar con el sol para maximizar la producción de energía!</p>
+                            </div>
+                        </section>
+                        
+                        <!-- Referencia a los archivos del minijuego -->
+                        <link rel="stylesheet" href="../../assets/css/minigames/solar-game.css">
+                        <script src="../../assets/js/minigames/solar-game.js"></script>
 
                     </div>
                 </div>

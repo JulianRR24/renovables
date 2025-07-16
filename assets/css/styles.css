@@ -29,6 +29,10 @@ a:hover::after {
   background: #0367A6;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body,
 html {
   font-family: "Poppins", sans-serif;
@@ -51,6 +55,35 @@ body {
   background: #5FB6D9;
   margin: 0;
   padding: 0;
+}
+
+/* Estilos para la página de energía solar */
+body.template {
+  position: relative;
+}
+
+/* Asegurar que el contenido sea legible sobre el fondo */
+body.template .dashboard-container {
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2), inset 0px -10px 17px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de la animación */
+#animation-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+#animation-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
 }
 
 .dashboard-river {
@@ -466,6 +499,33 @@ body {
   padding: 0 20px;
 }
 
+/* Estilos para el botón de explorar */
+.large-banner a {
+  position: relative;
+  background: linear-gradient(135deg, #4a90e2 0%, #3a7bd5 100%);
+  color: black;
+  font-size: 12pt;
+  display: inline-flex;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+  margin-top: 15px;
+}
+
+.large-banner a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+  background: linear-gradient(135deg, #3a7bd5 0%, #4a90e2 100%);
+}
+
+/* Ajuste para la sección de tarjetas */
+#featured-cards {
+  scroll-margin-top: 20px; /* Espacio para el header fijo */
+}
+
 .large-banner a {
   position: relative;
   background: white;
@@ -587,7 +647,7 @@ body {
 }
 
 .featured-clay > div:nth-child(2) {
-  filter: hue-rotate(15deg);
+  filter: hue-rotate(20deg);
 }
 
 .featured-clay > div:nth-child(3) {
@@ -595,46 +655,88 @@ body {
 }
 
 .featured-clay > div:nth-child(4) {
-  filter: hue-rotate(45deg);
+  filter: hue-rotate(40deg);
 }
 
 .featured-clay > div:nth-child(5) {
-  filter: hue-rotate(60deg);
+  filter: hue-rotate(50deg);
 }
 
 .featured-clay > div:nth-child(6) {
-  filter: hue-rotate(75deg);
+  filter: hue-rotate(40deg);
+}
+
+.featured-clay > div:nth-child(7) {
+  filter: hue-rotate(30deg);
+}
+
+.featured-clay > div:nth-child(8) {
+  filter: hue-rotate(20deg);
+}
+
+.featured-clay > div:nth-child(9) {
+  filter: hue-rotate(10deg);
 }
 
 .featured-clay > div > div:nth-child(1) {
   all: unset;
-  width: 40%;
-  height: 250px;
-  background: url("https://picsum.photos/id/400/600/600");
-  background-size: cover;
+  width: 100%;
+  height: 200px;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 12px;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.featured-clay > div:nth-child(1) > div:nth-child(1) {
+  background-image: url("https://cdn.pixabay.com/photo/2013/07/12/18/17/solar-panel-153201_1280.png");
 }
 
 .featured-clay > div:nth-child(2) > div:nth-child(1) {
-  background: url("https://picsum.photos/id/402/600/600");
+  background-image: url("https://cdn.pixabay.com/photo/2014/04/03/10/39/wind-turbine-311017_1280.png");
 }
 
 .featured-clay > div:nth-child(3) > div:nth-child(1) {
-  background: url("https://picsum.photos/id/443/600/600");
+  background-image: url("https://cdn.pixabay.com/photo/2019/08/07/18/50/water-4391341_960_720.png");
 }
 
 .featured-clay > div:nth-child(4) > div:nth-child(1) {
-  background: url("https://picsum.photos/id/404/600/600");
+  background-image: url("https://cdn.pixabay.com/photo/2013/07/12/15/03/volcano-149321_1280.png");
+  background-size: cover;
 }
 
 .featured-clay > div:nth-child(5) > div:nth-child(1) {
-  background: url("https://picsum.photos/id/405/600/600");
+  background-image: url("https://cdn.pixabay.com/photo/2023/01/30/02/59/green-energy-7754536_960_720.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .featured-clay > div:nth-child(6) > div:nth-child(1) {
-  background: url("https://picsum.photos/id/408/600/600");
+  background-image: url("https://cdn.pixabay.com/photo/2016/02/22/12/37/waves-1215449_1280.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.featured-clay > div:nth-child(7) > div:nth-child(1) {
+  background-image: url("https://i.bstr.es/drivingeco/2024/03/energia-undimotriz.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.featured-clay > div:nth-child(8) > div:nth-child(1) {
+  background-image: url("https://www.energias-renovables.com/ficheroenergias/fotos/marinas/ampliada/p/planta_marina_termica.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.featured-clay > div:nth-child(9) > div:nth-child(1) {
+  background-image: url("https://www.newtral.es/wp-content/uploads/2022/09/2087024314-FF-HIDROGENO-VERDE-SHUTTERSTOCK.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .featured-clay > div:hover {
@@ -667,6 +769,184 @@ body {
 
 .featured-clay > div:nth-child(6):hover {
   animation: glow75 8s linear infinite;
+}
+
+.featured-template {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 35px;
+  z-index: 2;
+  padding: 0 10px;
+}
+
+.featured-template > div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: PaleGreen;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px 0 #035AA677, inset 0px -7px 12px 1px #0367A6;
+  transition: all 0.4s ease-in-out;
+  flex: 1 1 300px;
+  min-width: 0;
+  margin: 0;
+}
+
+.featured-template > div:nth-child(2) {
+  filter: hue-rotate(15deg);
+}
+
+.featured-template > div:nth-child(3) {
+  filter: hue-rotate(30deg);
+}
+
+.featured-template > div:nth-child(4) {
+  filter: hue-rotate(45deg);
+}
+
+.featured-template > div:nth-child(5) {
+  filter: hue-rotate(60deg);
+}
+
+.featured-template > div:nth-child(6) {
+  filter: hue-rotate(75deg);
+}
+
+/* Eliminado el espacio para imágenes ya que no se usan */
+.featured-template > div > div:empty {
+  display: none;
+}
+
+.featured-template > div:hover {
+  animation: glow 10s linear infinite;
+  box-shadow: 0 17px 45px 0 #035AA6, inset 0px -7px 12px 1px #0367A6;
+  cursor: pointer;
+  transform: translateY(-10px);
+  transition: all 0.4s ease-in-out;
+}
+
+.featured-template > div:active {
+  transform: scale(0.96);
+}
+
+.featured-template > div:nth-child(2):hover {
+  animation: glow15 8s linear infinite;
+}
+
+.featured-template > div:nth-child(3):hover {
+  animation: glow30 8s linear infinite;
+}
+
+.featured-template > div:nth-child(4):hover {
+  animation: glow45 8s linear infinite;
+}
+
+.featured-template > div:nth-child(5):hover {
+  animation: glow60 8s linear infinite;
+}
+
+.featured-template > div:nth-child(6):hover {
+  animation: glow75 8s linear infinite;
+}
+
+/* Estilos para el minijuego de paneles solares */
+.game-container {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game-canvas {
+  border: 2px solid #0d47a1;
+  border-radius: 8px;
+  background-color: #e0f7fa;
+  margin: 0 auto 15px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.game-controls {
+  margin: 15px 0;
+}
+
+.game-controls .btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 0 10px;
+  cursor: pointer;
+  background-color: #0d47a1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.game-controls .btn:hover {
+  background-color: #1565c0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game-controls .btn:active {
+  transform: translateY(0);
+}
+
+#solarGameScore {
+  font-size: 18px;
+  color: #0d47a1;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.content-section.minigame-section {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.content-section.minigame-section h2 {
+  color: #0d47a1;
+  margin-bottom: 15px;
+}
+
+.content-section.minigame-section p {
+  color: #333;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Instrucciones del juego */
+.game-instructions {
+  background: rgba(13, 71, 161, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: left;
+}
+
+.game-instructions h3 {
+  color: #0d47a1;
+  margin-top: 0;
+}
+
+.game-instructions ul {
+  padding-left: 20px;
+}
+
+.game-instructions li {
+  margin-bottom: 8px;
 }
 
 @keyframes glow {
@@ -1023,6 +1303,18 @@ body {
   }
 }
 
+/* Estilos responsivos para featured-template */
+@media (min-width: 768px) {
+  .featured-template > div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .featured-template > div > div:last-child {
+    width: 100%;
+  }
+}
+
 @media (max-width: 1500px) {
   .clay-category {
     width: 24%;
@@ -1273,6 +1565,233 @@ body {
 }
 
 /* Asegurar que el botón sea visible en móviles */
+
+/* ======================
+   ESTILOS DE TEMPLATE
+   ====================== */
+
+/* Estilos específicos para la plantilla de energía */
+.energy-information {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    color: #333;
+}
+
+.energy-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.energy-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.energy-subtitle {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    font-weight: 400;
+}
+
+.energy-section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.energy-section h2 {
+    color: #3498db;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.energy-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: #3498db;
+    border-radius: 2px;
+}
+
+.energy-text {
+    line-height: 1.8;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.energy-text p {
+    margin-bottom: 1.2rem;
+}
+
+.energy-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0;
+}
+
+.feature-card {
+    border-radius: 12px;
+    padding: 1.8rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.feature-card ul {
+    padding-left: 1.2rem;
+}
+
+.feature-card li {
+    margin-bottom: 0.6rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.energy-stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.stat-item {
+    flex: 1;
+    min-width: 150px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.stat-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #3498db;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+}
+
+.content-section {
+    padding: 40px 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.content-section h2 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.game-container {
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 400px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5em;
+    color: #7f8c8d;
+    border: 2px dashed #bdc3c7;
+}
+
+.game-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 15px;
+    padding: 0 10px;
+}
+
+.energy-counter {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #0d47a1;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.energy-icon {
+    font-size: 1.3em;
+    margin-right: 8px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.game-controls {
+    display: flex;
+    gap: 10px;
+}
+
+/* Media queries para la plantilla */
+@media (max-width: 768px) {
+    .content-section h2 {
+        font-size: 2em;
+    }
+    .featured-clay > div {
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-section {
+        padding: 20px 10px;
+    }
+    .content-section h2 {
+        font-size: 1.8em;
+    }
+    .featured-clay > div h3 {
+        font-size: 1.5em;
+    }
+    .featured-clay > div p {
+        font-size: 1em;
+    }
+}
 @media (max-width: 1200px) {
     .mobile-menu-toggle {
         display: flex;
