@@ -526,6 +526,7 @@ body.template .dashboard-container {
   scroll-margin-top: 20px; /* Espacio para el header fijo */
 }
 
+
 .large-banner a {
   position: relative;
   background: white;
@@ -795,26 +796,27 @@ body.template .dashboard-container {
   flex: 1 1 300px;
   min-width: 0;
   margin: 0;
+  filter: hue-rotate(50deg);
 }
 
 .featured-template > div:nth-child(2) {
-  filter: hue-rotate(15deg);
+  filter: hue-rotate(50deg);
 }
 
 .featured-template > div:nth-child(3) {
-  filter: hue-rotate(30deg);
+  filter: hue-rotate(50deg);
 }
 
 .featured-template > div:nth-child(4) {
-  filter: hue-rotate(45deg);
+  filter: hue-rotate(50deg);
 }
 
 .featured-template > div:nth-child(5) {
-  filter: hue-rotate(60deg);
+  filter: hue-rotate(50deg);
 }
 
 .featured-template > div:nth-child(6) {
-  filter: hue-rotate(75deg);
+  filter: hue-rotate(50deg);
 }
 
 /* Eliminado el espacio para imágenes ya que no se usan */
