@@ -1810,7 +1810,7 @@ body.template .dashboard-container {
 }
 
 /* Ajustar el menú para pantallas medianas y pequeñas */
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
     .mobile-menu-toggle {
         display: flex;
     }
@@ -1982,4 +1982,9 @@ body.template .dashboard-container {
 
 p {
  color: black;
+}
+
+li {
+ color: black;
+ margin-bottom: 10px;
 }

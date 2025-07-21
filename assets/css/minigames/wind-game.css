@@ -1,0 +1,16 @@
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-canvas {
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.game-controls {
+    display: flex;
+    gap: 10px;
+}
