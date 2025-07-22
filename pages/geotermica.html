@@ -9,7 +9,7 @@
 
     <!-- Elemento para la animación del fondo -->
     <div id="animation-container">
-        <img id="scroll-animation" src="../assets/frames/energiasolar/ezgif-frame-001.jpg" alt="Animación de scroll">
+        <img id="scroll-animation" src="../assets/frames/geotermica/ezgif-frame-001.jpg" alt="Animación de scroll">
     </div>
 
     <!-- Script de animación de scroll -->
@@ -21,7 +21,7 @@
                 animationContainerId: 'animation-container',
                 animationImageId: 'scroll-animation',
                 maxFrames: 144, // Número total de frames
-                framesPath: '../assets/frames/energiasolar/', // Ruta a los frames
+                framesPath: '../assets/frames/geotermica/', // Ruta a los frames
                 framePrefix: 'ezgif-frame-', // Prefijo de los archivos de frame
                 frameExtension: '.jpg', // Extensión de los archivos
                 scrollSensitivity: 0.5, // Sensibilidad del scroll
@@ -360,22 +360,9 @@
                         <!-- Sección de Visualización 3D -->
                         <section class="energy-section" id="modelo-3d" style="background: transparent; box-shadow: none;">
                             <h2>Modelo 3D Interactivo</h2>
-                            <p style="color: #333;">Explora este modelo 3D interactivo de un panel solar. Puedes hacer clic y arrastrar para rotar la vista, usar la rueda del mouse para acercar/alejar, y mantener presionada la tecla Ctrl mientras arrastras para mover la cámara.</p>
+                            <p style="color: #333;">Explora este modelo 3D interactivo Puedes hacer clic y arrastrar para rotar la vista, usar la rueda del mouse para acercar/alejar, y mantener presionada la tecla Ctrl mientras arrastras para mover la cámara.</p>
                             
-                            <div class="model3d-container" style="max-width: 1000px; margin: 0 auto; padding: 0 15px;">
-                                <div id="model3d-viewer" style="width: 100%; height: 500px; border: 1px solid rgba(221, 221, 221, 0.3); border-radius: 8px; position: relative; margin: 0 auto; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(5px);">
-                                    <div id="loading-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.5); border-radius: 8px;">
-                                        <div style="text-align: center; color: #fff;">
-                                            <div class="spinner" style="width: 40px; height: 40px; margin: 0 auto 10px; border: 4px solid rgba(255, 255, 255, 0.3); border-top: 4px solid #3498db; border-radius: 50%; animation: spin 1s linear infinite;"></div>
-                                            <p style="color: #fff;">Cargando modelo 3D...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="model3d-controls" style="margin-top: 15px; text-align: center;">
-                                    <button id="reset-camera" class="btn" style="margin: 0 5px;">Reiniciar Vista</button>
-                                    <button id="toggle-wireframe" class="btn" style="margin: 0 5px;">Modo Alámbrico</button>
-                                    <button id="toggle-lights" class="btn" style="margin: 0 5px;">Alternar Luces</button>
-                                </div>
+                            <div class="sketchfab-embed-wrapper"> <iframe title="Energie electrique geothermale" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="1200" height="600" style="border: 1px solid rgba(221, 221, 221, 0.3); border-radius: 8px;" allow="autoplay; fullscreen; vr" mozallowfullscreen webkitallowfullscreen src="https://sketchfab.com/models/66f8d5f650134395bdea335d78d989c3/embed?autostart=1"> </iframe>
                             </div>
                         </section>
 
@@ -405,36 +392,64 @@
 
                         <!-- 3. Sección del Minijuego -->
                         <section class="content-section minigame-section">
-                            <h2>¡Minijuego de Energía Solar!</h2>
-                            <p>Aprende sobre la importancia de la orientación de los paneles solares para maximizar la producción de energía.</p>
-                            <div class="game-instructions">
-                                <h3>¿Cómo jugar?</h3>
-                                <ul>
-                                    <li>Mueve el <strong>ratón</strong> para rotar el panel solar y alinearlo con el sol.</li>
-                                    <li>Intenta mantener el panel apuntando hacia el sol para maximizar la producción de energía.</li>
-                                    <li>El sol cambiará de posición cada 3 segundos. ¡Ajusta el panel para mantener una alta eficiencia!</li>
-                                    <li>Tu puntuación (0-100%) muestra qué tan bien está alineado el panel con el sol.</li>
-                                </ul>
+                          <h1>Simulador de Central Geotérmica</h1>
+
+                          <div class="dashboard-game">
+                              <div class="stat">
+                                  <h3>Temperatura del Subsuelo:</h3>
+                                  <p id="subsurface-temp">150°C</p>
+                                  <div class="progress-bar-container">
+                                      <div id="temp-bar" class="progress-bar temp"></div>
+                                  </div>
+                              </div>
+                              <div class="stat">
+                                  <h3>Agua Inyectada:</h3>
+                                  <p id="water-injected">0 L/s</p>
+                                  <div class="progress-bar-container">
+                                      <div id="water-bar" class="progress-bar water"></div>
+                                  </div>
+                              </div>
+                              <div class="stat">
+                                  <h3>Vapor Generado:</h3>
+                                  <p id="steam-generated">0 kg/s</p>
+                                  <div class="progress-bar-container">
+                                      <div id="steam-bar" class="progress-bar steam"></div>
+                                  </div>
+                              </div>
+                              <div class="stat">
+                                  <h3>Energía Producida:</h3>
+                                  <p id="energy-produced">0 MW</p>
+                                  <div class="progress-bar-container">
+                                      <div id="energy-bar" class="progress-bar energy"></div>
+                                  </div>
+                              </div>
+                              <div class="stat">
+                                  <h3>Estado de la Central:</h3>
+                                  <p id="plant-status">Operando</p>
+                              </div>
+                          </div>
+
+                          <div class="controls">
+                            <h2>Controles de la Central</h2>
+                            <button id="inject-water-btn">Inyectar Agua (+10 L/s)</button>
+                            <button id="reduce-water-btn">Reducir Agua (-10 L/s)</button>
+                            <button id="increase-pressure-btn">Aumentar Presión</button>
+                            <button id="decrease-pressure-btn">Disminuir Presión</button>
+                            <button id="maintenance-btn">Mantenimiento (30s)</button>
+                          </div>
+                
+                          <div class="messages" id="game-messages">
                             </div>
-                            <div class="game-container">
-                                <canvas id="solarGame" width="600" height="400" class="game-canvas"></canvas>
-                                <div class="game-stats">
-                                    <div class="energy-counter">
-                                        <span class="energy-icon">⚡</span>
-                                        <span id="energyValue">0</span> kWh
-                                    </div>
-                                <div class="game-controls">
-                                        <button id="solarStartBtn" class="btn">Comenzar Juego</button>
-                                        <button id="solarResetBtn" class="btn">Reiniciar</button>
-                                </div>
-                                </div>
-                                <p id="solarGameScore" style="margin-top: 1rem;">¡Alinea el panel solar con el sol para maximizar la producción de energía!</p>
-                            </div>
+                
+                          <div class="explanation">
+                            <h2>¿Cómo funciona la Energía Geotérmica?</h2>
+                            <p>La energía geotérmica aprovecha el calor del interior de la Tierra. Se inyecta agua fría en pozos profundos, donde se calienta al contacto con rocas calientes. Este agua caliente o vapor se extrae a la superficie para mover turbinas, las cuales generan electricidad. Es una fuente de energía renovable y constante.</p>
+                          </div>
                         </section>
                         
                         <!-- Referencia a los archivos del minijuego -->
-                        <link rel="stylesheet" href="../../assets/css/minigames/solar-game.css">
-                        <script src="../../assets/js/minigames/solar-game.js"></script>
+                        <link rel="stylesheet" href="../../assets/css/minigames/geotermica-game.css">
+                        <script src="../../assets/js/minigames/geotermica-game.js"></script>
 
                     </div>
                 </div>
