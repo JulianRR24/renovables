@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydro Power Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Hydroelectric Power Simulator</h1>
+
+        <div class="scenario">
+            <div class="reservoir">
+                <div class="water-level" id="waterLevel"></div>
+                <div class="dam-label">Reservoir</div>
+            </div>
+
+            <div class="dam">
+                <div class="gate-control">
+                    <button id="openGateBtn">Abrir Compuerta</button>
+                    <button id="closeGateBtn">Cerrar Compuerta</button>
+                    <div class="gate-status" id="gateStatus">Compuerta Cerrada</div>
+                </div>
+            </div>
+
+            <div class="power-plant">
+                <div class="penstock"></div>
+                <div class="turbine-area">
+                    <div class="turbine" id="turbine"></div>
+                    <div class="generator"></div>
+                    <div class="plant-label">Central Eléctrica</div>
+                </div>
+                <div class="power-output">
+                    <div class="power-bar" id="powerBar"></div>
+                    <div class="power-value" id="powerValue">0 MW</div>
+                    <div class="output-label">Energía Generada</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h2>Instrucciones:</h2>
+            <p>Usa los botones para **abrir** y **cerrar** la compuerta del embalse.</p>
+            <p>Observa cómo el flujo de agua hace girar la **turbina** y genera **electricidad**.</p>
+            <p>Un mayor flujo de agua significa más energía generada, ¡pero cuidado con vaciar el embalse demasiado rápido!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

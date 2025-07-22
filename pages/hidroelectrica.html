@@ -9,7 +9,7 @@
 
     <!-- Elemento para la animación del fondo -->
     <div id="animation-container">
-        <img id="scroll-animation" src="../assets/frames/energiasolar/ezgif-frame-001.jpg" alt="Animación de scroll">
+        <img id="scroll-animation" src="../assets/frames/hidroelectrica/ezgif-frame-001.jpg" alt="Animación de scroll">
     </div>
 
     <!-- Script de animación de scroll -->
@@ -20,8 +20,8 @@
             const scrollAnimation = new ScrollAnimation({
                 animationContainerId: 'animation-container',
                 animationImageId: 'scroll-animation',
-                maxFrames: 144, // Número total de frames
-                framesPath: '../assets/frames/energiasolar/', // Ruta a los frames
+                maxFrames: 169, // Número total de frames
+                framesPath: '../assets/frames/hidroelectrica/', // Ruta a los frames
                 framePrefix: 'ezgif-frame-', // Prefijo de los archivos de frame
                 frameExtension: '.jpg', // Extensión de los archivos
                 scrollSensitivity: 0.5, // Sensibilidad del scroll
@@ -208,11 +208,12 @@
                             
                                         <div>
                                             <h3>Beneficios</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                             <ul>
-                                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                                <li><b>Fuente de energía renovable y costo-efectiva:</b> Es inherentemente renovable y generalmente más económica que otras fuentes de electricidad, con bajos costos de mantenimiento, operación y combustible a lo largo de su vida útil.</li>
+                                                <li><b>Suministro de energía constante y fiable:</b> Puede generar energía 24/7, actuando como un respaldo flexible y confiable para la red, respondiendo rápidamente a interrupciones o picos de demanda.</li>
+                                                <li><b>Capacidad de almacenamiento de energía:</b> Las represas permiten almacenar grandes volúmenes de agua para una generación controlada, y los sistemas de almacenamiento por bombeo son la mayor fuente de almacenamiento de energía a escala de servicios públicos.</li>
+                                                <li><b>Beneficios adicionales multifuncionales:</b> Las instalaciones hidroeléctricas a menudo ofrecen control de inundaciones, apoyo a la irrigación y suministro de agua.</li>
+                                                <li><b>Beneficios ambientales:</b> No produce contaminación térmica y tiene mínimas o nulas emisiones directas de gases de efecto invernadero.</li>
                                             </ul>
                                         </div>
                             
@@ -224,11 +225,19 @@
                             
                                         <div>
                                             <h3>Contraindicaciones</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                             <ul>
-                                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                                <li><b>Impactos ambientales de las represas:</b>
+                                                    <ul>
+                                                      <li>Interrupción de migraciones de peces y ciclos de vida de especies acuáticas.</li>
+                                                      <li>Submersión y desplazamiento de comunidades ecológicas y humanas.</li>
+                                                      <li>Generación de emisiones de metano por descomposición de vegetación sumergida.</li>
+                                                      <li>Afectación de la calidad del agua y hábitats marinos.</li>
+                                                    </ul>
+                                                  </li>
+                                                  <li><b>Dependencia del recurso hídrico:</b> Vulnerabilidad a la escasez de agua y sequías extremas, lo que puede comprometer la capacidad de generación.</li>
+                                                  <li><b>Alta inversión inicial:</b> Aunque los costos operativos son bajos, la construcción de la infraestructura requiere una inversión inicial significativamente elevada.</li>
+                                                  <li><b>Tecnología altamente específica del sitio:</b> Su implementación está restringida a ubicaciones geográficas con características hidrológicas y topográficas muy particulares (ríos, precipitaciones, regiones montañosas).</li>
+                                                  <li><b>Necesidad de extensas líneas de transmisión:</b> Si las plantas están lejos de los centros de consumo, se requiere la construcción de líneas de alto voltaje, lo que añade complejidad y costos.</li>
                                             </ul>
                                         </div>
                             
@@ -240,11 +249,33 @@
                             
                                         <div>
                                             <h3>Requerimientos</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                             <ul>
-                                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                                <li><b>Monetarios:</b>
+                                                    <ul>
+                                                      <li><b>Costos de instalación iniciales elevados:</b> Principalmente por obras de ingeniería civil (represas, túneles) y equipos electromecánicos (maquinaria de generación).</li>
+                                                      <li><b>Minimización de costos:</b> Mediante selección y diseño adecuados del sitio, dada la especificidad de la ubicación.</li>
+                                                      <li><b>Rentabilidad a largo plazo:</b> La larga vida útil de las instalaciones distribuye los costos iniciales, resultando en bajos costos operativos de mantenimiento, operación y combustible.</li>
+                                                    </ul>
+                                                  </li>
+                                                  <li><b>Infraestructura:</b>
+                                                    <ul>
+                                                      <li><b>Represas o estructuras de desvío:</b> Para crear la diferencia de elevación necesaria del agua.</li>
+                                                      <li><b>Tuberías o penstocks:</b> Para conducir el agua hacia las turbinas.</li>
+                                                      <li><b>Casa de máquinas (powerhouse):</b> Alberga turbinas y generadores.</li>
+                                                      <li><b>Aliviaderos (spillways):</b> Para descargar el exceso de agua y controlar el nivel del embalse.</li>
+                                                      <li><b>Reservorios:</b> Para almacenar agua, cruciales en sistemas de almacenamiento por bombeo.</li>
+                                                      <li><b>Ubicaciones ideales:</b> Zonas con abundantes precipitaciones, regiones montañosas y proximidad a centros de carga eléctrica.</li>
+                                                    </ul>
+                                                  </li>
+                                                  <li><b>Tecnológicos:</b>
+                                                    <ul>
+                                                      <li><b>Turbinas:</b> Convierten la energía del agua en movimiento en energía mecánica (ej. Propeller, Francis, Kinetic, Pelton, Cross-Flow, según el sitio).</li>
+                                                      <li><b>Generadores:</b> Transforman la energía mecánica de las turbinas en electricidad.</li>
+                                                      <li><b>Transformadores:</b> Elevan el voltaje para la transmisión de larga distancia.</li>
+                                                      <li><b>Sistemas de almacenamiento por bombeo:</b> Requieren bombas y generadores que funcionen también como motores.</li>
+                                                      <li><b>Sistemas de control:</b> Para gestionar el flujo de agua, operación de turbinas e integración a la red.</li>
+                                                    </ul>
+                                                  </li>
                                             </ul>
                                         </div>
                             
@@ -294,8 +325,12 @@
                                 <article class="energy-section">
                                     <h2>Soporte</h2>
                                     <div class="energy-text">
-                                        <p>La energía solar se puede aprovechar de dos formas principales: a través de paneles fotovoltaicos que convierten la luz solar directamente en electricidad, o mediante sistemas solares térmicos que utilizan el calor del sol para calentar agua o aire.</p>
-                                        <p>Los sistemas fotovoltaicos están compuestos por celdas que generan corriente eléctrica cuando la luz solar incide sobre ellas, un inversor que convierte la corriente continua en alterna, y un sistema de almacenamiento (baterías) opcional.</p>
+                                        <ul>
+                                            <li><a href="https://www.energy.gov/eere/water/hydropower-basics" target="_blank">Energy.gov - Hydropower Basics</a></li>
+                                            <li><a href="https://www.britannica.com/science/hydroelectric-power" target="_blank">Britannica - Hydroelectric Power</a></li>
+                                            <li><a href="https://www.irena.org/hydropower" target="_blank">IRENA - Hydropower</a></li>
+                                            <li><a href="https://www.nationalgeographic.org/encyclopedia/hydropower/" target="_blank">National Geographic - Hydropower</a></li>
+                                        </ul>
                                     </div>
                                 </article>
                             </div>
@@ -304,83 +339,685 @@
                         <hr>
 
                         <!-- Sección de Visualización 3D -->
-                        <section class="energy-section" id="modelo-3d" style="background: transparent; box-shadow: none;">
-                            <h2>Modelo 3D Interactivo</h2>
-                            <p style="color: #333;">Explora este modelo 3D interactivo de un panel solar. Puedes hacer clic y arrastrar para rotar la vista, usar la rueda del mouse para acercar/alejar, y mantener presionada la tecla Ctrl mientras arrastras para mover la cámara.</p>
+                        <section class="energy-section" id="modelo-3d" style="background: transparent; box-shadow: none">
+                            <h2>Modelo 3D Interactivo de Central Hidroeléctrica</h2>
+                            <p style="color: #333;">Explora este modelo 3D interactivo de una central hidroeléctrica. Puedes hacer clic y arrastrar para rotar la vista, usar la rueda del mouse para acercar/alejar, y mantener presionada la tecla Ctrl mientras arrastras para mover la cámara.</p>
                             
                             <div class="model3d-container" style="max-width: 1000px; margin: 0 auto; padding: 0 15px;">
-                                <div id="model3d-viewer" style="width: 100%; height: 500px; border: 1px solid rgba(221, 221, 221, 0.3); border-radius: 8px; position: relative; margin: 0 auto; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(5px);">
-                                    <div id="loading-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.5); border-radius: 8px;">
-                                        <div style="text-align: center; color: #fff;">
-                                            <div class="spinner" style="width: 40px; height: 40px; margin: 0 auto 10px; border: 4px solid rgba(255, 255, 255, 0.3); border-top: 4px solid #3498db; border-radius: 50%; animation: spin 1s linear infinite;"></div>
-                                            <p style="color: #fff;">Cargando modelo 3D...</p>
+                                <div id="model3d-viewer" style="width: 100%; height: 600px; border: 1px solid rgba(221, 221, 221, 0.3); border-radius: 8px; position: relative; margin: 0 auto; background: #000; overflow: hidden;">
+                                    <div id="info" style="position: absolute; top: 10px; width: 100%; text-align: center; color: white; background-color: rgba(0,0,0,0.7); padding: 10px; z-index: 100; font-size: 18px;">Modelo 3D Avanzado de Central Hidroeléctrica | Use el mouse para rotar, rueda para zoom</div>
+                                    <div id="controls" style="position: absolute; bottom: 20px; left: 20px; background-color: rgba(0,0,0,0.7); padding: 15px; color: white; border-radius: 10px; display: flex; flex-direction: column; gap: 10px; z-index: 100;">
+                                        <div>
+                                            <button id="toggleWater" style="padding: 8px 15px; cursor: pointer; background-color: #1a66ff; color: white; border: none; border-radius: 5px; font-size: 14px; margin: 5px;">Activar/Desactivar Agua</button>
+                                            <button id="toggleTurbines" style="padding: 8px 15px; cursor: pointer; background-color: #1a66ff; color: white; border: none; border-radius: 5px; font-size: 14px; margin: 5px;">Activar/Desactivar Turbinas</button>
+                                        </div>
+                                        <div>
+                                            <button id="dayNight" style="padding: 8px 15px; cursor: pointer; background-color: #1a66ff; color: white; border: none; border-radius: 5px; font-size: 14px; margin: 5px;">Cambiar a Noche</button>
+                                            <button id="viewTop" style="padding: 8px 15px; cursor: pointer; background-color: #1a66ff; color: white; border: none; border-radius: 5px; font-size: 14px; margin: 5px;">Vista Aérea</button>
+                                            <button id="viewFront" style="padding: 8px 15px; cursor: pointer; background-color: #1a66ff; color: white; border: none; border-radius: 5px; font-size: 14px; margin: 5px;">Vista Frontal</button>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="model3d-controls" style="margin-top: 15px; text-align: center;">
-                                    <button id="reset-camera" class="btn" style="margin: 0 5px;">Reiniciar Vista</button>
-                                    <button id="toggle-wireframe" class="btn" style="margin: 0 5px;">Modo Alámbrico</button>
-                                    <button id="toggle-lights" class="btn" style="margin: 0 5px;">Alternar Luces</button>
                                 </div>
                             </div>
                         </section>
 
                         <!-- Incluir Three.js y complementos -->
                         <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
-                        <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/OBJLoader.js"></script>
-                        <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/MTLLoader.js"></script>
                         <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+                        <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
+                        <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/objects/Water.js"></script>
+                        <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/libs/stats.min.js"></script>
                         
-                        <!-- Configuración del modelo 3D -->
+                        <!-- Script para el modelo 3D de la central hidroeléctrica -->
                         <script>
-                            // Configuración personalizada para el modelo 3D
-                            window.modelConfig = {
-                                basePath: '../../assets/3d-models/eolica/',  // Ruta base para los archivos del modelo  
-                                mtlFile: 'EolicOBJ.mtl',           // Archivo MTL
-                                objFile: 'EolicOBJ.obj',           // Archivo OBJ
-                                scale: 0.05,                                    // Escala del modelo
-                                position: { x: 0, y: 0, z: 0 },                 // Posición inicial
-                                rotation: { x: 0, y: 0, z: 0 }                  // Rotación inicial
-                            };
+                            // Variables globales
+                            let water, sun, isDay = true, turbinesOn = true, waterOn = true;
+                            let scene, camera, renderer, controls, stats;
+                            
+                            init();
+                            animate();
+                            
+                            function init() {
+                                // Esperar a que el DOM esté completamente cargado
+                                if (document.readyState !== 'complete') {
+                                    window.addEventListener('load', init);
+                                    return;
+                                }
+                                // Obtener el contenedor primero
+                                const container = document.getElementById('model3d-viewer');
+                                
+                                // Escena con color de fondo claro
+                                scene = new THREE.Scene();
+                                scene.background = new THREE.Color(0x87ceeb);
+                                scene.fog = new THREE.Fog(0x87ceeb, 1, 500);
+                                
+                                // Estadísticas de rendimiento
+                                stats = new Stats();
+                                stats.showPanel(0);
+                                container.appendChild(stats.dom);
+                                
+                                // Cámara con relación de aspecto correcta
+                                const aspect = container.offsetWidth / container.offsetHeight;
+                                camera = new THREE.PerspectiveCamera(45, aspect, 0.1, 1000);
+                                camera.position.set(0, 30, 50);
+                                camera.lookAt(0, 0, 0);
+                                
+                                // Renderer
+                                renderer = new THREE.WebGLRenderer({ 
+                                    antialias: true, 
+                                    alpha: true,
+                                    powerPreference: 'high-performance'
+                                });
+                                renderer.setPixelRatio(window.devicePixelRatio);
+                                renderer.setSize(container.offsetWidth, container.offsetHeight);
+                                renderer.shadowMap.enabled = true;
+                                renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+                                renderer.toneMapping = THREE.ACESFilmicToneMapping;
+                                renderer.toneMappingExposure = 1.0;
+                                // Limpiar y agregar el renderer al contenedor
+                                container.innerHTML = '';
+                                container.appendChild(renderer.domElement);
+                                
+                                // Asegurar que el contenedor tenga un tamaño definido
+                                container.style.position = 'relative';
+                                container.style.width = '100%';
+                                container.style.height = '500px'; // Altura fija para el visor 3D
+                                
+                                // Controles
+                                controls = new THREE.OrbitControls(camera, renderer.domElement);
+                                controls.enableDamping = true;
+                                controls.dampingFactor = 0.05;
+                                controls.minDistance = 20;
+                                controls.maxDistance = 200;
+                                controls.maxPolarAngle = Math.PI * 0.9;
+                                
+                                // Iluminación diurna
+                                createDayLighting();
+                                
+                                // Terreno
+                                createTerrain();
+                                
+                                // Presa y estructuras principales
+                                createDam();
+                                
+                                // Casa de máquinas
+                                createPowerHouse();
+                                
+                                // Torres de transmisión
+                                createTransmissionTowers();
+                                
+                                // Vegetación
+                                createVegetation();
+                                
+                                // Agua
+                                createWater();
+                                
+                                // Eventos
+                                setupEventListeners();
+                                
+                                // Ventana redimensionable
+                                window.addEventListener('resize', onWindowResize);
+                            }
+                            
+                            function createDayLighting() {
+                                // Luz ambiental
+                                scene.add(new THREE.AmbientLight(0xffffff, 0.5));
+                                
+                                // Sol (luz direccional)
+                                sun = new THREE.DirectionalLight(0xffffbb, 1);
+                                sun.position.set(100, 100, 50);
+                                sun.castShadow = true;
+                                sun.shadow.mapSize.width = 2048;
+                                sun.shadow.mapSize.height = 2048;
+                                sun.shadow.camera.near = 0.5;
+                                sun.shadow.camera.far = 500;
+                                sun.shadow.camera.left = -100;
+                                sun.shadow.camera.right = 100;
+                                sun.shadow.camera.top = 100;
+                                sun.shadow.camera.bottom = -100;
+                                sun.shadow.bias = -0.0001;
+                                scene.add(sun);
+                                
+                                // Helper para visualizar la sombra
+                                // const helper = new THREE.CameraHelper(sun.shadow.camera);
+                                // scene.add(helper);
+                            }
+                            
+                            function createNightLighting() {
+                                // Limpiar luces diurnas
+                                scene.children = scene.children.filter(child => !(child instanceof THREE.Light));
+                                
+                                // Luz de la luna
+                                const moon = new THREE.DirectionalLight(0xaaaaff, 0.3);
+                                moon.position.set(-100, 100, -50);
+                                moon.castShadow = true;
+                                scene.add(moon);
+                                
+                                // Luces artificiales
+                                const powerHouseLight1 = new THREE.PointLight(0xffcc66, 1, 30);
+                                powerHouseLight1.position.set(-10, 8, -15);
+                                scene.add(powerHouseLight1);
+                                
+                                const powerHouseLight2 = new THREE.PointLight(0xffcc66, 1, 30);
+                                powerHouseLight2.position.set(10, 8, -15);
+                                scene.add(powerHouseLight2);
+                                
+                                const damLight1 = new THREE.SpotLight(0xffffff, 0.8, 0, Math.PI/8, 0.5);
+                                damLight1.position.set(-15, 15, 5);
+                                damLight1.target.position.set(-15, 0, 5);
+                                scene.add(damLight1);
+                                scene.add(damLight1.target);
+                                
+                                const damLight2 = new THREE.SpotLight(0xffffff, 0.8, 0, Math.PI/8, 0.5);
+                                damLight2.position.set(15, 15, 5);
+                                damLight2.target.position.set(15, 0, 5);
+                                scene.add(damLight2);
+                                scene.add(damLight2.target);
+                            }
+                            
+                            function createTerrain() {
+                                // Suelo base
+                                const groundGeometry = new THREE.PlaneGeometry(300, 300, 50, 50);
+                                const groundMaterial = new THREE.MeshStandardMaterial({ 
+                                    color: 0x3a5f0b,
+                                    roughness: 0.8,
+                                    metalness: 0.2
+                                });
+                                const ground = new THREE.Mesh(groundGeometry, groundMaterial);
+                                ground.rotation.x = -Math.PI / 2;
+                                ground.receiveShadow = true;
+                                scene.add(ground);
+                                
+                                // Montañas
+                                const mountainGeometry = new THREE.ConeGeometry(30, 40, 32);
+                                const mountainMaterial = new THREE.MeshStandardMaterial({ 
+                                    color: 0x5d4037,
+                                    roughness: 1.0
+                                });
+                                
+                                const mountain1 = new THREE.Mesh(mountainGeometry, mountainMaterial);
+                                mountain1.position.set(-60, 20, -80);
+                                mountain1.castShadow = true;
+                                scene.add(mountain1);
+                                
+                                const mountain2 = new THREE.Mesh(mountainGeometry, mountainMaterial);
+                                mountain2.position.set(70, 25, -90);
+                                mountain2.castShadow = true;
+                                scene.add(mountain2);
+                                
+                                // Río
+                                const riverGeometry = new THREE.PlaneGeometry(40, 200, 10, 50);
+                                const riverMaterial = new THREE.MeshStandardMaterial({ 
+                                    color: 0x1a66ff,
+                                    transparent: true,
+                                    opacity: 0.3
+                                });
+                                const river = new THREE.Mesh(riverGeometry, riverMaterial);
+                                river.rotation.x = -Math.PI / 2;
+                                river.position.y = 0.1;
+                                river.position.z = -50;
+                                scene.add(river);
+                            }
+                            
+                            function createDam() {
+                                // Base de la presa
+                                const damBaseGeometry = new THREE.BoxGeometry(40, 30, 5);
+                                const damBaseMaterial = new THREE.MeshStandardMaterial({ 
+                                    color: 0x9e9e9e,
+                                    roughness: 0.7,
+                                    metalness: 0.3
+                                });
+                                const damBase = new THREE.Mesh(damBaseGeometry, damBaseMaterial);
+                                damBase.position.set(0, 15, 10);
+                                damBase.castShadow = true;
+                                damBase.receiveShadow = true;
+                                scene.add(damBase);
+                                
+                                // Cresta de la presa
+                                const damTopGeometry = new THREE.BoxGeometry(45, 2, 10);
+                                const damTop = new THREE.Mesh(damTopGeometry, damBaseMaterial);
+                                damTop.position.set(0, 31, 10);
+                                scene.add(damTop);
+                                
+                                // Tuberías de descarga
+                                const pipeGeometry = new THREE.CylinderGeometry(2, 2, 25, 32);
+                                const pipeMaterial = new THREE.MeshStandardMaterial({ 
+                                    color: 0x616161,
+                                    metalness: 0.8,
+                                    roughness: 0.4
+                                });
+                                
+                                for (let i = -1; i <= 1; i += 2) {
+                                    const pipe = new THREE.Mesh(pipeGeometry, pipeMaterial);
+                                    pipe.position.set(i * 10, 12.5, 10);
+                                    pipe.rotation.x = Math.PI / 2;
+                                    pipe.castShadow = true;
+                                    scene.add(pipe);
+                                    
+                                    // Válvulas
+                                    const valveGeometry = new THREE.TorusGeometry(2.5, 0.5, 16, 32);
+                                    const valve = new THREE.Mesh(valveGeometry, pipeMaterial);
+                                    valve.position.set(i * 10, 12.5, 5);
+                                    valve.rotation.x = Math.PI / 2;
+                                    scene.add(valve);
+                                }
+                                
+                                // Compuertas
+                                const gateGeometry = new THREE.BoxGeometry(8, 6, 0.5);
+                                const gateMaterial = new THREE.MeshStandardMaterial({ 
+                                    color: 0x424242,
+                                    metalness: 0.9,
+                                    roughness: 0.2
+                                });
+                                
+                                const leftGate = new THREE.Mesh(gateGeometry, gateMaterial);
+                                leftGate.position.set(-12, 28, 10.5);
+                                scene.add(leftGate);
+                                
+                                const rightGate = new THREE.Mesh(gateGeometry, gateMaterial);
+                                rightGate.position.set(12, 28, 10.5);
+                                scene.add(rightGate);
+                                
+                                // Pasarela
+                                const walkwayGeometry = new THREE.BoxGeometry(38, 0.5, 2);
+                                const walkway = new THREE.Mesh(walkwayGeometry, damBaseMaterial);
+                                walkway.position.set(0, 31, 9);
+                                scene.add(walkway);
+                                
+                                // Barandilla
+                                const railingGeometry = new THREE.BoxGeometry(0.2, 1.5, 0.2);
+                                for (let x = -19; x <= 19; x += 2) {
+                                    const railingPost = new THREE.Mesh(railingGeometry, gateMaterial);
+                                    railingPost.position.set(x, 31.75, 8);
+                                    scene.add(railingPost);
+                                }
+                            }
+                            
+                            function createPowerHouse() {
+                                // Edificio principal
+                                const houseGeometry = new THREE.BoxGeometry(25, 12, 20);
+                                const houseMaterial = new THREE.MeshStandardMaterial({ 
+                                    color: 0xcccccc,
+                                    roughness: 0.6
+                                });
+                                const house = new THREE.Mesh(houseGeometry, houseMaterial);
+                                house.position.set(0, 6, -15);
+                                house.castShadow = true;
+                                house.receiveShadow = true;
+                                scene.add(house);
+                                
+                                // Techo
+                                const roofGeometry = new THREE.BoxGeometry(26, 1, 21);
+                                const roofMaterial = new THREE.MeshStandardMaterial({ 
+                                    color: 0x333333,
+                                    roughness: 0.9
+                                });
+                                const roof = new THREE.Mesh(roofGeometry, roofMaterial);
+                                roof.position.set(0, 12.5, -15);
+                                scene.add(roof);
+                                
+                                // Puertas
+                                const doorGeometry = new THREE.BoxGeometry(3, 5, 0.5);
+                                const doorMaterial = new THREE.MeshStandardMaterial({ 
+                                    color: 0x666666,
+                                    metalness: 0.5
+                                });
+                                
+                                const leftDoor = new THREE.Mesh(doorGeometry, doorMaterial);
+                                leftDoor.position.set(-5, 2.5, -25.5);
+                                scene.add(leftDoor);
+                                
+                                const rightDoor = new THREE.Mesh(doorGeometry, doorMaterial);
+                                rightDoor.position.set(5, 2.5, -25.5);
+                                scene.add(rightDoor);
+                                
+                                // Ventanas
+                                const windowGeometry = new THREE.BoxGeometry(2, 2, 0.3);
+                                const windowMaterial = new THREE.MeshStandardMaterial({ 
+                                    color: 0xadd8e6,
+                                    transparent: true,
+                                    opacity: 0.7,
+                                    metalness: 0.9
+                                });
+                                
+                                for (let x = -10; x <= 10; x += 5) {
+                                    for (let y = 5; y <= 9; y += 4) {
+                                        const window = new THREE.Mesh(windowGeometry, windowMaterial);
+                                        window.position.set(x, y, -25.5);
+                                        scene.add(window);
+                                    }
+                                }
+                                
+                                // Turbinas
+                                createTurbines();
+                            }
+                            
+                            function createTurbines() {
+                                const turbineGroup = new THREE.Group();
+                                turbineGroup.position.set(0, 0, -15);
+                                
+                                // Base de la turbina
+                                const baseGeometry = new THREE.CylinderGeometry(3, 3, 1, 32);
+                                const baseMaterial = new THREE.MeshStandardMaterial({ 
+                                    color: 0x333333,
+                                    metalness: 0.8,
+                                    roughness: 0.3
+                                });
+                                
+                                // Rotor de la turbina
+                                const rotorGeometry = new THREE.CylinderGeometry(2, 2, 0.5, 32);
+                                const rotorMaterial = new THREE.MeshStandardMaterial({ 
+                                    color: 0xaaaaaa,
+                                    metalness: 0.9,
+                                    roughness: 0.1
+                                });
+                                
+                                // Eje de la turbina
+                                const shaftGeometry = new THREE.CylinderGeometry(0.5, 0.5, 4, 16);
+                                
+                                for (let i = -1; i <= 1; i += 2) {
+                                    // Base
+                                    const base = new THREE.Mesh(baseGeometry, baseMaterial);
+                                    base.position.set(i * 8, 0.5, 0);
+                                    turbineGroup.add(base);
+                                    
+                                    // Rotor
+                                    const rotor = new THREE.Mesh(rotorGeometry, rotorMaterial);
+                                    rotor.position.set(i * 8, 1.25, 0);
+                                    rotor.rotation.x = Math.PI / 2;
+                                    rotor.userData.rotating = true;
+                                    turbineGroup.add(rotor);
+                                    
+                                    // Eje
+                                    const shaft = new THREE.Mesh(shaftGeometry, rotorMaterial);
+                                    shaft.position.set(i * 8, 3, 0);
+                                    turbineGroup.add(shaft);
+                                    
+                                    // Generador (caja)
+                                    const generatorGeometry = new THREE.BoxGeometry(4, 3, 3);
+                                    const generator = new THREE.Mesh(generatorGeometry, baseMaterial);
+                                    generator.position.set(i * 8, 4, 0);
+                                    turbineGroup.add(generator);
+                                }
+                                
+                                scene.add(turbineGroup);
+                            }
+                            
+                            function createTransmissionTowers() {
+                                const towerMaterial = new THREE.MeshStandardMaterial({ 
+                                    color: 0x555555,
+                                    metalness: 0.8
+                                });
+                                
+                                // Torres principales
+                                for (let z = -40; z <= -20; z += 20) {
+                                    // Base de la torre
+                                    const baseGeometry = new THREE.BoxGeometry(2, 20, 2);
+                                    const base = new THREE.Mesh(baseGeometry, towerMaterial);
+                                    base.position.set(-25, 10, z);
+                                    base.castShadow = true;
+                                    scene.add(base);
+                                    
+                                    // Brazos de la torre
+                                    const armGeometry = new THREE.BoxGeometry(10, 0.5, 0.5);
+                                    const leftArm = new THREE.Mesh(armGeometry, towerMaterial);
+                                    leftArm.position.set(-25, 15, z);
+                                    scene.add(leftArm);
+                                    
+                                    const rightArm = new THREE.Mesh(armGeometry, towerMaterial);
+                                    rightArm.position.set(-25, 18, z);
+                                    scene.add(rightArm);
+                                    
+                                    // Aisladores
+                                    const insulatorGeometry = new THREE.SphereGeometry(0.5, 16, 16);
+                                    const insulatorMaterial = new THREE.MeshStandardMaterial({ 
+                                        color: 0xffffff,
+                                        roughness: 0.1,
+                                        metalness: 0.9
+                                    });
+                                    
+                                    for (let x = -5; x <= 5; x += 10) {
+                                        for (let y = 14; y <= 19; y += 3) {
+                                            const insulator = new THREE.Mesh(insulatorGeometry, insulatorMaterial);
+                                            insulator.position.set(-25 + x, y, z);
+                                            scene.add(insulator);
+                                        }
+                                    }
+                                }
+                                
+                                // Líneas de transmisión
+                                const lineMaterial = new THREE.LineBasicMaterial({ color: 0xffff00 });
+                                
+                                for (let y = 15; y <= 18; y += 3) {
+                                    const points = [];
+                                    points.push(new THREE.Vector3(-8, y, -15));
+                                    points.push(new THREE.Vector3(-25, y, -20));
+                                    points.push(new THREE.Vector3(-25, y, -40));
+                                    
+                                    const lineGeometry = new THREE.BufferGeometry().setFromPoints(points);
+                                    const line = new THREE.Line(lineGeometry, lineMaterial);
+                                    scene.add(line);
+                                }
+                            }
+                            
+                            function createVegetation() {
+                                // Árboles
+                                const treeGeometry = new THREE.ConeGeometry(3, 8, 8);
+                                const treeTrunkGeometry = new THREE.CylinderGeometry(0.5, 0.5, 2, 8);
+                                const treeMaterial = new THREE.MeshStandardMaterial({ color: 0x2e7d32 });
+                                const trunkMaterial = new THREE.MeshStandardMaterial({ color: 0x5d4037 });
+                                
+                                for (let i = 0; i < 20; i++) {
+                                    const x = (Math.random() - 0.5) * 200;
+                                    const z = (Math.random() - 0.5) * 200 - 50;
+                                    
+                                    // Solo colocar árboles lejos de las estructuras principales
+                                    if (Math.abs(x) > 40 || z < -30 || z > 30) {
+                                        const trunk = new THREE.Mesh(treeTrunkGeometry, trunkMaterial);
+                                        trunk.position.set(x, 1, z);
+                                        trunk.castShadow = true;
+                                        scene.add(trunk);
+                                        
+                                        const tree = new THREE.Mesh(treeGeometry, treeMaterial);
+                                        tree.position.set(x, 6, z);
+                                        tree.castShadow = true;
+                                        scene.add(tree);
+                                    }
+                                }
+                                
+                                // Arbustos
+                                const bushGeometry = new THREE.SphereGeometry(2, 8, 8);
+                                const bushMaterial = new THREE.MeshStandardMaterial({ color: 0x388e3c });
+                                
+                                for (let i = 0; i < 30; i++) {
+                                    const x = (Math.random() - 0.5) * 150;
+                                    const z = (Math.random() - 0.5) * 150 - 30;
+                                    const y = Math.random() * 0.5;
+                                    
+                                    if (Math.abs(x) > 30 || z < -20) {
+                                        const bush = new THREE.Mesh(bushGeometry, bushMaterial);
+                                        bush.position.set(x, 2 + y, z);
+                                        bush.castShadow = true;
+                                        scene.add(bush);
+                                    }
+                                }
+                            }
+                            
+                            function createWater() {
+                                // Agua del embalse
+                                const waterGeometry = new THREE.PlaneGeometry(100, 100, 10, 10);
+                                
+                                water = new THREE.Water(
+                                    waterGeometry,
+                                    {
+                                        textureWidth: 512,
+                                        textureHeight: 512,
+                                        waterNormals: new THREE.TextureLoader().load('https://threejs.org/examples/textures/waternormals.jpg', function(texture) {
+                                            texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+                                        }),
+                                        sunDirection: new THREE.Vector3(),
+                                        sunColor: 0xffffff,
+                                        waterColor: 0x1a66ff,
+                                        distortionScale: 3.7,
+                                        fog: scene.fog !== undefined
+                                    }
+                                );
+                                
+                                water.rotation.x = -Math.PI / 2;
+                                water.position.y = 0.1;
+                                water.position.z = 5;
+                                scene.add(water);
+                                
+                                // Agua cayendo por la presa
+                                const waterfallGeometry = new THREE.PlaneGeometry(10, 20, 1, 1);
+                                const waterfallMaterial = new THREE.MeshStandardMaterial({
+                                    color: 0x1a66ff,
+                                    transparent: true,
+                                    opacity: 0.7,
+                                    side: THREE.DoubleSide
+                                });
+                                
+                                for (let i = -1; i <= 1; i += 2) {
+                                    const waterfall = new THREE.Mesh(waterfallGeometry, waterfallMaterial);
+                                    waterfall.position.set(i * 10, 10, 10);
+                                    waterfall.userData.offset = Math.random() * Math.PI * 2;
+                                    scene.add(waterfall);
+                                }
+                            }
+                            
+                            function setupEventListeners() {
+                                // Botón día/noche
+                                document.getElementById('dayNight').addEventListener('click', () => {
+                                    isDay = !isDay;
+                                    if (isDay) {
+                                        createDayLighting();
+                                        document.getElementById('dayNight').textContent = 'Cambiar a Noche';
+                                        renderer.toneMappingExposure = 1;
+                                    } else {
+                                        createNightLighting();
+                                        document.getElementById('dayNight').textContent = 'Cambiar a Día';
+                                        renderer.toneMappingExposure = 0.5;
+                                    }
+                                });
+                                
+                                // Botón activar/desactivar turbinas
+                                document.getElementById('toggleTurbines').addEventListener('click', () => {
+                                    turbinesOn = !turbinesOn;
+                                    scene.traverse(obj => {
+                                        if (obj.userData.rotating !== undefined) {
+                                            obj.userData.rotating = turbinesOn;
+                                        }
+                                    });
+                                });
+                                
+                                // Botón activar/desactivar agua
+                                document.getElementById('toggleWater').addEventListener('click', () => {
+                                    waterOn = !waterOn;
+                                    water.visible = waterOn;
+                                });
+                                
+                                // Vistas predefinidas
+                                document.getElementById('viewTop').addEventListener('click', () => {
+                                    camera.position.set(0, 100, 0);
+                                    camera.lookAt(0, 0, 0);
+                                    controls.target.set(0, 0, 0);
+                                    controls.update();
+                                });
+                                
+                                document.getElementById('viewFront').addEventListener('click', () => {
+                                    camera.position.set(0, 30, 50);
+                                    camera.lookAt(0, 15, 0);
+                                    controls.target.set(0, 15, 0);
+                                    controls.update();
+                                });
+                            }
+                            
+                            function onWindowResize() {
+                                const container = document.getElementById('model3d-viewer');
+                                if (!container) return;
+                                
+                                const width = container.offsetWidth;
+                                const height = container.offsetHeight || 500; // Altura por defecto si es 0
+                                
+                                camera.aspect = width / height;
+                                camera.updateProjectionMatrix();
+                                renderer.setSize(width, height);
+                            }
+                            
+                            function animate() {
+                                requestAnimationFrame(animate);
+                                stats.update();
+                                
+                                // Rotar turbinas si están activas
+                                if (turbinesOn) {
+                                    scene.traverse(obj => {
+                                        if (obj.userData.rotating) {
+                                            obj.rotation.z += 0.05;
+                                        }
+                                    });
+                                }
+                                
+                                // Animar agua
+                                if (waterOn && water.material.uniforms) {
+                                    water.material.uniforms['time'].value += 0.01;
+                                    
+                                    // Animar cascadas
+                                    scene.traverse(obj => {
+                                        if (obj.userData.offset !== undefined) {
+                                            obj.position.y = 10 + Math.sin(obj.userData.offset + performance.now() * 0.002) * 2;
+                                        }
+                                    });
+                                }
+                                
+                                controls.update();
+                                renderer.render(scene, camera);
+                            }
                         </script>
-                        
-                        <!-- Script para el visor 3D -->
-                        <script src="../../assets/js/3d-viewer.js"></script>
 
                         <hr>
 
                         <!-- 3. Sección del Minijuego -->
                         <section class="content-section minigame-section">
-                            <h2>¡Minijuego de Energía Solar!</h2>
-                            <p>Aprende sobre la importancia de la orientación de los paneles solares para maximizar la producción de energía.</p>
-                            <div class="game-instructions">
-                                <h3>¿Cómo jugar?</h3>
-                                <ul>
-                                    <li>Mueve el <strong>ratón</strong> para rotar el panel solar y alinearlo con el sol.</li>
-                                    <li>Intenta mantener el panel apuntando hacia el sol para maximizar la producción de energía.</li>
-                                    <li>El sol cambiará de posición cada 3 segundos. ¡Ajusta el panel para mantener una alta eficiencia!</li>
-                                    <li>Tu puntuación (0-100%) muestra qué tan bien está alineado el panel con el sol.</li>
-                                </ul>
-                            </div>
-                            <div class="game-container">
-                                <canvas id="solarGame" width="600" height="400" class="game-canvas"></canvas>
-                                <div class="game-stats">
-                                    <div class="energy-counter">
-                                        <span class="energy-icon">⚡</span>
-                                        <span id="energyValue">0</span> kWh
+                            <div class="scenario">
+                                <div class="reservoir">
+                                    <div class="water-level" id="waterLevel"></div>
+                                    <div class="dam-label">Reservoir</div>
+                                </div>
+                    
+                                <div class="dam">
+                                    <div class="gate-control">
+                                        <button id="openGateBtn">Abrir Compuerta</button>
+                                        <button id="closeGateBtn">Cerrar Compuerta</button>
+                                        <div class="gate-status" id="gateStatus">Compuerta Cerrada</div>
                                     </div>
-                                <div class="game-controls">
-                                        <button id="solarStartBtn" class="btn">Comenzar Juego</button>
-                                        <button id="solarResetBtn" class="btn">Reiniciar</button>
                                 </div>
+                    
+                                <div class="power-plant">
+                                    <div class="penstock"></div>
+                                    <div class="turbine-area">
+                                        <div class="turbine" id="turbine"></div>
+                                        <div class="generator"></div>
+                                        <div class="plant-label">Central Eléctrica</div>
+                                    </div>
+                                    <div class="power-output">
+                                        <div class="power-bar" id="powerBar"></div>
+                                        <div class="power-value" id="powerValue">0 MW</div>
+                                        <div class="output-label">Energía Generada</div>
+                                    </div>
                                 </div>
-                                <p id="solarGameScore" style="margin-top: 1rem;">¡Alinea el panel solar con el sol para maximizar la producción de energía!</p>
+                            </div>
+                    
+                            <div class="instructions">
+                                <h2>Instrucciones:</h2>
+                                <p>Usa los botones para <strong>abrir</strong> y <strong>cerrar</strong> la compuerta del embalse.</p>
+                                <p>Observa cómo el flujo de agua hace girar la <strong>turbina</strong> y genera <strong>electricidad</strong>.</p>
+                                <p>Un mayor flujo de agua significa más energía generada, ¡pero cuidado con vaciar el embalse demasiado rápido!</p>
                             </div>
                         </section>
                         
                         <!-- Referencia a los archivos del minijuego -->
-                        <link rel="stylesheet" href="../../assets/css/minigames/solar-game.css">
-                        <script src="../../assets/js/minigames/solar-game.js"></script>
+                        <link rel="stylesheet" href="../../assets/css/minigames/hidroelectrica-game.css">
+                        <script src="../../assets/js/minigames/hidroelectrica-game.js"></script>
 
                     </div>
                 </div>
