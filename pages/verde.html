@@ -5,11 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Energías Renovables - Verde</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
-    </style>
+    <style>
+      body {
+          margin: 0;
+          padding: 0;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          min-height: 100vh;
+      }
+      
+      h1 {
+          color: #1abc9c;
+          margin: 20px 0;
+      }
+      
+      .game-container {
+          background-color: white;
+          border-radius: 8px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          padding: 20px;
+          margin-bottom: 20px;
+          text-align: center;
+      }
+      
+      #gameCanvas {
+          background-color: white;
+          border: 1px solid #ddd;
+          margin-top: 10px;
+      }
+      
+      .instructions {
+          max-width: 100%;
+          background-color: white;
+          border-radius: 8px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          padding: 20px;
+          margin-bottom: 20px;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+      }
+      
+      .instructions h2 {
+          color: #2c3e50;
+          margin-top: 0;
+      }
+      
+      .instructions p {
+          color: #34495e;
+          line-height: 1.6;
+      }
+  </style>
 
     <!-- Elemento para la animación del fondo -->
     <div id="animation-container">
-        <img id="scroll-animation" src="../assets/frames/energiasolar/ezgif-frame-001.jpg" alt="Animación de scroll">
+        <img id="scroll-animation" src="../assets/frames/verde/ezgif-frame-001.jpg" alt="Animación de scroll">
     </div>
 
     <!-- Script de animación de scroll -->
@@ -20,8 +75,8 @@
             const scrollAnimation = new ScrollAnimation({
                 animationContainerId: 'animation-container',
                 animationImageId: 'scroll-animation',
-                maxFrames: 144, // Número total de frames
-                framesPath: '../assets/frames/energiasolar/', // Ruta a los frames
+                maxFrames: 200, // Número total de frames
+                framesPath: '../assets/frames/verde/', // Ruta a los frames
                 framePrefix: 'ezgif-frame-', // Prefijo de los archivos de frame
                 frameExtension: '.jpg', // Extensión de los archivos
                 scrollSensitivity: 0.5, // Sensibilidad del scroll
@@ -404,36 +459,22 @@
 
                         <!-- 3. Sección del Minijuego -->
                         <section class="content-section minigame-section">
-                            <h2>¡Minijuego de Energía Solar!</h2>
-                            <p>Aprende sobre la importancia de la orientación de los paneles solares para maximizar la producción de energía.</p>
-                            <div class="game-instructions">
-                                <h3>¿Cómo jugar?</h3>
-                                <ul>
-                                    <li>Mueve el <strong>ratón</strong> para rotar el panel solar y alinearlo con el sol.</li>
-                                    <li>Intenta mantener el panel apuntando hacia el sol para maximizar la producción de energía.</li>
-                                    <li>El sol cambiará de posición cada 3 segundos. ¡Ajusta el panel para mantener una alta eficiencia!</li>
-                                    <li>Tu puntuación (0-100%) muestra qué tan bien está alineado el panel con el sol.</li>
-                                </ul>
-                            </div>
-                            <div class="game-container">
-                                <canvas id="solarGame" width="600" height="400" class="game-canvas"></canvas>
-                                <div class="game-stats">
-                                    <div class="energy-counter">
-                                        <span class="energy-icon">⚡</span>
-                                        <span id="energyValue">0</span> kWh
-                                    </div>
-                                <div class="game-controls">
-                                        <button id="solarStartBtn" class="btn">Comenzar Juego</button>
-                                        <button id="solarResetBtn" class="btn">Reiniciar</button>
-                                </div>
-                                </div>
-                                <p id="solarGameScore" style="margin-top: 1rem;">¡Alinea el panel solar con el sol para maximizar la producción de energía!</p>
-                            </div>
+                          <h1>Producción de Hidrógeno Verde</h1>
+    
+                          <div class="game-container">
+                              <canvas id="gameCanvas" width="700" height="500"></canvas>
+                          </div>
+                          
+                          <div class="instructions">
+                              <h2>¿Cómo jugar?</h2>
+                              <p>Este minijuego simula el proceso de electrólisis para producir hidrógeno verde a partir de agua usando energía renovable.</p>
+                              <p><strong>Objetivo:</strong> Haz clic sobre las moléculas de agua (H₂O) cuando los átomos de hidrógeno (azules) estén alineados horizontalmente para separarlos y producir hidrógeno molecular (H₂).</p>
+                              <p>Cada molécula separada correctamente te dará puntos, pero consume energía. La energía se regenera lentamente (simulando fuentes renovables).</p>
+                          </div>
                         </section>
                         
                         <!-- Referencia a los archivos del minijuego -->
-                        <link rel="stylesheet" href="../../assets/css/minigames/solar-game.css">
-                        <script src="../../assets/js/minigames/solar-game.js"></script>
+                        <script src="../../assets/js/minigames/verde-game.js"></script>
 
                     </div>
                 </div>
