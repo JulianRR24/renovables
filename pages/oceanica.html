@@ -20,8 +20,8 @@
             const scrollAnimation = new ScrollAnimation({
                 animationContainerId: 'animation-container',
                 animationImageId: 'scroll-animation',
-                maxFrames: 144, // Número total de frames
-                framesPath: '../assets/frames/energiasolar/', // Ruta a los frames
+                maxFrames: 200, // Número total de frames
+                framesPath: '../assets/frames/oceanica/', // Ruta a los frames
                 framePrefix: 'ezgif-frame-', // Prefijo de los archivos de frame
                 frameExtension: '.jpg', // Extensión de los archivos
                 scrollSensitivity: 0.5, // Sensibilidad del scroll
@@ -401,36 +401,41 @@
 
                         <!-- 3. Sección del Minijuego -->
                         <section class="content-section minigame-section">
-                            <h2>¡Minijuego de Energía Solar!</h2>
-                            <p>Aprende sobre la importancia de la orientación de los paneles solares para maximizar la producción de energía.</p>
-                            <div class="game-instructions">
-                                <h3>¿Cómo jugar?</h3>
-                                <ul>
-                                    <li>Mueve el <strong>ratón</strong> para rotar el panel solar y alinearlo con el sol.</li>
-                                    <li>Intenta mantener el panel apuntando hacia el sol para maximizar la producción de energía.</li>
-                                    <li>El sol cambiará de posición cada 3 segundos. ¡Ajusta el panel para mantener una alta eficiencia!</li>
-                                    <li>Tu puntuación (0-100%) muestra qué tan bien está alineado el panel con el sol.</li>
-                                </ul>
-                            </div>
-                            <div class="game-container">
-                                <canvas id="solarGame" width="600" height="400" class="game-canvas"></canvas>
-                                <div class="game-stats">
-                                    <div class="energy-counter">
-                                        <span class="energy-icon">⚡</span>
-                                        <span id="energyValue">0</span> kWh
-                                    </div>
-                                <div class="game-controls">
-                                        <button id="solarStartBtn" class="btn">Comenzar Juego</button>
-                                        <button id="solarResetBtn" class="btn">Reiniciar</button>
-                                </div>
-                                </div>
-                                <p id="solarGameScore" style="margin-top: 1rem;">¡Alinea el panel solar con el sol para maximizar la producción de energía!</p>
-                            </div>
+                          <h1>Energía Termo-Oceánica (OTEC)</h1>
+    
+                          <div class="game-container">
+                              <div class="game-info">
+                                  <div class="info-item score">Energía: <span id="energyValue">0</span> MW</div>
+                                  <div class="info-item energy">Diferencia T°: <span id="tempDiffValue">20</span>°C</div>
+                                  <div class="info-item level">Nivel: <span id="levelValue">1</span></div>
+                              </div>
+                              <canvas id="gameCanvas" width="700" height="500"></canvas>
+                              <div>
+                                  <button id="startBtn" class="btn">Comenzar Juego</button>
+                                  <button id="pauseBtn" class="btn" disabled>Pausa</button>
+                              </div>
+                          </div>
+                          
+                          <div class="instructions">
+                              <h2>¿Cómo jugar?</h2>
+                              <p>Controla la planta OTEC para generar energía renovable aprovechando la diferencia de temperatura entre aguas superficiales cálidas y aguas profundas frías.</p>
+                              <p>• Mantén la diferencia de temperatura óptima (20°C-25°C) para máxima eficiencia</p>
+                              <p>• Evita que la turbina se sobrecaliente (temperatura > 30°C)</p>
+                              <p>• Evita que la turbina se enfríe demasiado (temperatura < 15°C)</p>
+                              <p>• Usa el agua fría profunda para enfriar y el agua superficial cálida para calentar</p>
+                          </div>
+                          
+                          <div class="game-over" id="gameOverScreen">
+                              <h2>¡Planta OTEC fuera de servicio!</h2>
+                              <div class="final-score">Energía generada: <span id="finalEnergy">0</span> MW</div>
+                              <div>Nivel Alcanzado: <span id="finalLevel">1</span></div>
+                              <button id="restartBtn" class="btn">Reiniciar Planta</button>
+                          </div>
                         </section>
                         
                         <!-- Referencia a los archivos del minijuego -->
-                        <link rel="stylesheet" href="../../assets/css/minigames/solar-game.css">
-                        <script src="../../assets/js/minigames/solar-game.js"></script>
+                        <link rel="stylesheet" href="../../assets/css/minigames/oceanica-game.css">
+                        <script src="../../assets/js/minigames/oceanica-game.js"></script>
 
                     </div>
                 </div>
