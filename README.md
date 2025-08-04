@@ -4,8 +4,6 @@
 
 # 🌱 Renovables.com - Portal de Energías Renovables
 
-\<br\>
-
 ## 📝 Descripción
 
 Sitio web educativo y moderno que ofrece información detallada sobre una variedad de **energías limpias**, como la energía solar, eólica, hidroeléctrica, geotérmica, mareomotriz, undimotriz y biomasa.
